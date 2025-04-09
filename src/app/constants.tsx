@@ -253,41 +253,11 @@ export const pages: PageData[] = [
     },
   },
   {
-    component: StatMediaSplit,
+    component: WrappedTextHeader,
     data: {
-      statsTitle: "Next Steps",
-      stats: [
-        {
-          stat: {
-            first: "Explore ",
-            number: 10,
-            format: { useGrouping: false },
-          },
-          text: "of our **research and background resources** behind some parts of the project.",
-        },
-        {
-          stat: {
-            first: "For ",
-            before: "$",
-            number: 25,
-          },
-          text: "you can *support the project* by purchasing carbon offsets, each of which **eliminates one tonne of CO2e from the atmosphere** *while also* **supporting the indigenous land stewards who make this possible.**",
-        },
-        {
-          stat: {
-            first: "See the ",
-            number: 15,
-          },
-          text: "*people and organizations* that form the **team behind this project**",
-        },
-      ],
-      media: {
-        type: "img",
-        src: "/img/flooded-v-not.jpeg",
-        alt: "GPS located photo of AWD vs Flooded rice paddies.",
-        caption: "A GPS mapped photo of AWD vs Flooded rice paddies used for ground truthing our remote sensing.",
-      },
-    },
+      section: "Next steps",
+      header: "Participating in W-x-C and the Bali Project",
+      text: "If you want to learn more about our science and the Bali project, see our **resources**.  If you want to increase WINs, you can purchase some of our carbon offsets that eliminate atmospheric methane emissions while also supporting the indigenous land stewards that make this possible.  You can also learn about the team behind W-x-C and the Bali Project.  Finally, feel free to contact us.",  increase our WINs, You can learn more about the Bali project An automated system leverages remote sensing and international markets to enable **payments to indigenous stewards** who enhance the global commons.",
   },
   {
     component: ImageToContact,
