@@ -255,15 +255,15 @@ export const pages: PageData[] = [
   {
     component: StatMediaSplit,
     data: {
-      statsTitle: "A Letter to the Future...",
+      statsTitle: "Next Steps",
       stats: [
         {
           stat: {
-            first: "In ",
-            number: 2012,
+            first: "Explore ",
+            number: 10,
             format: { useGrouping: false },
           },
-          text: "*UNESCO* recognized the **long-term sustainability of the subak system** by establishing a *World Heritage site* on Bali.  Somya Pertiwi provided assistance on the Ministry's proposal.",
+          text: "research and background papers from some of our <a href="../resources">project resources<a>.",
         },
         {
           stat: {
