@@ -36,7 +36,7 @@ export default makePageStream([
           alt: "Flowchart",
           blurbs: [
             "Frontier science creates a *bottom-up solution* to the Tragedy of the Commons.",
-            "*Integrating ideas* from agriculture, anthropology, chemistry, complex systems, computer science, earth science, ecology, engineering, economics, and finance.",
+            "*Integrating ideas* from agriculture, anthropology, chemistry, complex systems, computer science, earth science, ecology, economics, engineering, and finance.",
             "Driven by an *Information-Age infrastructure* that is easy to scale up with wide applicability.",
             "Creates incentives for individuals to **enhance the global commons** rather than destroy it.",
           ],
@@ -70,8 +70,8 @@ export default makePageStream([
     component: WrappedTextHeader,
     data: {
       section: "World Improving Numbers",
-      header: "WINS",
-      text: "Remote sensing creates **trustworthy WINs** that translate the actions of stewards into measurable outcomes such as tonnes of CO2e avoided or the amount of forest preserved in a natural state. High quality WINS **generate payments** for stewards from global patrons and markets.",
+      header: "WINs",
+      text: "Remote sensing creates **trustworthy WINs** that translate the actions of stewards into measurable outcomes such as tonnes of CO2e avoided or the amount of forest preserved in a natural state. High quality **WINs generate payments for stewards** from global patrons and markets.",
     },
   },
   {
@@ -126,7 +126,7 @@ export default makePageStream([
       ],
       section: "Our pilot project",
       header: "Bali, Indonesia",
-      text: "Rice on Bali has been **sustainably farmed for over a millennium.**  Unfortunately, flooded paddies produce methane, a dangerous greenhouse gas.  By changing their irrigation practices to **Alternate Wetting and Drying (AWD)**, farmers can mitigate methane emissions from their fields.  Compensating farmers for taking on the additional risk and effort needed to adopt AWD will allow Bali to **embrace a new regime** of globally sustainable agriculture.",
+      text: "Rice on Bali has been **sustainably farmed for over a millennium.**  Unfortunately, flooded rice paddies produce methane, a dangerous greenhouse gas.  By changing their irrigation practices to **Alternate Wetting and Drying (AWD)**, farmers can mitigate methane emissions from their fields.  Compensating farmers for taking on the additional risk and effort needed to adopt AWD will allow Bali to **embrace a new regime** of globally sustainable agriculture.",
     },
   },
   {
@@ -156,7 +156,7 @@ export default makePageStream([
             number: 70 / 100,
             format: { style: "percent" },
           },
-          text: "of the *methane emissions from Balinese rice fields can be eliminated* by not flooding the rice paddies.  AWD also *reduces the runoff of fertilizer* that damages Bali's coral reefs.",
+          text: "of the *methane emissions from Balinese rice fields can be eliminated* by not flooding the paddies.  AWD also *reduces the runoff of fertilizer* that damages Bali's coral reefs.",
         },
       ],
       media: {
@@ -195,7 +195,7 @@ export default makePageStream([
             "The Balinese NGO *Somya Pertiwi (Kindness of the Earth Goddess)* leads the project.",
             "Scientists from the *International Rice Research Institute* are also monitoring our activities.",
             "*Somya Pertiwi* is working within the centuries-old system of *communally-governed subaks* that coordinate rice farming across the paddies.",
-            "Agricultural extension agents will *assist the farmers* with the adoption of **AWD**, and monitor the results.",
+            "Agricultural extension agents will *assist the farmers* with the adoption of **AWD** and monitor the results.",
           ],
         },
       ],
@@ -211,7 +211,7 @@ export default makePageStream([
             number: 2012,
             format: { useGrouping: false },
           },
-          text: "was when the **sustainability of the subak system** was recongized as a *UNESCO World Heritage site.*  Somya Pertiwi provided assistance on the Ministry's proposal.",
+          text: "was when the **sustainability of the subak system** was recognized as a *UNESCO World Heritage site.*  Somya Pertiwi designed the UNESCO proposal for the Ministry.",
         },
         {
           stat: {
