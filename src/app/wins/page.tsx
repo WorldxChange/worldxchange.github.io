@@ -59,7 +59,7 @@ export default makePageStream([
     data: {
       section: "Please join us as a Patron",
       header: "The Ask",
-      text: "**If you, your friends, or your organization would like to become Patrons please connect with us** to sponsor some of our quality carbon offsets.",
+      text: "**If you, your friends, or your organization would like to become Patrons please connect with us** to sponsor some of our Bali Project carbon offsets.",
     },
   },
   {
