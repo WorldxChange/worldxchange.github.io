@@ -36,7 +36,7 @@ export default makePageStream([
           alt: "Flowchart",
           blurbs: [
             "Frontier science creates a *bottom-up solution* to the Tragedy of the Commons.",
-            "*Integrating ideas* from agriculture, anthropology, chemistry, complex systems, computer science, earth science, ecology, engineering, economics, and finance.",
+            "*Integrating ideas* from agriculture, anthropology, chemistry, complex systems, computer science, earth science, ecology, economics, engineering, and finance.",
             "Driven by an *Information-Age infrastructure* that is easy to scale up with wide applicability.",
             "Creates incentives for individuals to **enhance the global commons** rather than destroy it.",
           ],
