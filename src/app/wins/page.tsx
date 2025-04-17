@@ -97,56 +97,56 @@ export default makePageStream([
             number: 16,
             after: " tCO2e",
           },
-          text: "are released by the *average American* each year",
+          text: "are released by the *average American* each year.",
         },
         {
           stat: {
             number: 8,
             after: " tCO2e",
           },
-          text: "are released by the *average European* each year",
+          text: "are released by the *average European* each year.",
         },
         {
           stat: {
             number: 2,
             after: " tCO2e",
           },
-          text: "is the *average individual* **sustainable target** each year (IPCC)",
+          text: "is the *average individual* **sustainable target** each year (IPCC).",
         },
         {
           stat: {
             number: 4.5,
             after: " tCO2e",
           },
-          text: "are released by *driving an average gasoline car 12,000 miles (19,000 kilometers)*",
+          text: "are released by *driving an average gasoline car 12,000 miles (19,000 kilometers).*",
         },
         {
           stat: {
             number: 0.5,
             after: " tCO2e",
           },
-          text: "are released by *flying economy class 2,500 miles (4,000 kilometers),* such as a one-way flight from NYC to LA",
+          text: "are released by *flying economy class 2,500 miles (4,000 kilometers),* such as a one-way flight from NYC to LA.",
         },
         {
           stat: {
             number: 1.5,
             after: " tCO2e",
           },
-          text: "are avoided by **adopting a vegetarian over a meat-heavy diet** each year",
+          text: "are avoided by **adopting a vegetarian over a meat-heavy diet** each year.",
         },
         {
           stat: {
             number: 2.5,
             after: " tCO2e",
           },
-          text: "are released from *heating a home (USA avg/person)* each year",
+          text: "are released from *heating a home (USA avg/person)* each year.",
         },
         {
           stat: {
             number: 3.8,
             after: " tCO2e",
           },
-          text: "are released from *home electric use (USA avg/person)* each year",
+          text: "are released from *home electric use (USA avg/person)* each year.",
         },
       ],
     },
