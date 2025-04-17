@@ -43,7 +43,7 @@ export default makePageStream([
     data: {
       section: "Carbon offset markets",
       header: "Transparency",
-      text: 'Carbon offset markets have been subject to **occasional corruption.** Some offset promises have been specious, "certification" agencies have incentives to generate revenue through high certification fees (encouraging enterprises that prioritize profits) and the sale of "certified" credits, resulting in the potential for **greenwashing.** Market prices for offsets (presumably a homogenous good), can range at any given time from under $1 to over $100 per tonne of CO2e, depending on the state of the market and the perceived quality of the offset.',
+      text: 'Carbon offset markets have been subject to occasional corruption. Some offset promises have been specious, "certification" agencies have incentives to generate revenue through high certification fees (encouraging enterprises that prioritize profits) and the sale of "certified" credits, resulting in the potential for greenwashing. Market prices for offsets (presumably a homogenous good), can range at any given time from under $1 to over $100 per tonne of CO2e, depending on the state of the market and the perceived quality of the offset.',
     },
   },
   {
