@@ -13,8 +13,10 @@ export const nav: {
 
 export const footerLinks = {
   "/": "Home",
+  "/wins": "WINs",
+  "/resources": "Resources",
+  "/team": "Team",
   "/contact": "Connect",
-  "/team": "People",
 };
 
 import React, { useLayoutEffect, useState } from "react";
