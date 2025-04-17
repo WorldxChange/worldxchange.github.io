@@ -83,7 +83,7 @@ export default makePageStream([
     data: {
       section: "A final word",
       header: "Choices",
-      text: "Patrons and Stewards need to recognize their impacts, and ultimate reliance, on the **global atmospheric commons.**  Everyone should engage in whatever activities they most value while also **considering the full implications, both good and bad, of their choices.**  When doing so, they may want to change their choices.  **WxC just wants to ensure** that whatever choices are made, they are well-informed.",
+      text: "Patrons and Stewards need to recognize their impacts, and ultimate reliance, on the **global atmospheric commons.**  Everyone should engage in whatever activities they most value while also **considering the full implications, both good and bad, of their choices.**  When doing so, they may or may not want to change their choices.  **WxC just wants to ensure** that whatever choices are made, they are well-informed.",
       },
   },
   //To give a sense of CO2e impact:\n\n- **Average American**: 16–20 tCO2e/year  \n- **Average European**: ~8 tCO2e/year  \n- **Sustainable target (IPCC)**: 2 tCO2e/year  \n\nSome specific examples:\n\n- Driving a gasoline car 12,000 miles/year: **4.5 tCO2e**  \n- NYC to LA one-way in economy: **0.5 tCO2e** (double in business class)  \n- Switching to vegetarian diet: **1.5 tCO2e savings**  \n- Home energy (USA avg/person): Heating: **2.5 tCO2e**, Electricity: **3.8 tCO2e**  \n\nMake the choices that matter to you—just make them **informed choices**.
