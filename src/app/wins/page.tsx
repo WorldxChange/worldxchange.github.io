@@ -118,7 +118,7 @@ export default makePageStream([
             number: 4.5,
             after: " tCO2e",
           },
-          text: "are released by *driving a gasoline car 12,000 miles (19,000 kilometers)*",
+          text: "are released by *driving an average gasoline car 12,000 miles (19,000 kilometers)*",
         },
         {
           stat: {
