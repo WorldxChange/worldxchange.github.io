@@ -211,7 +211,7 @@ export default makePageStream([
             number: 2012,
             format: { useGrouping: false },
           },
-          text: "was when the **sustainability of the subak system** was recongized as a *UNESCO World Heritage site.*  Somya Pertiwi provided assistance on the Ministry's proposal.",
+          text: "was when the **sustainability of the subak system** was recognized as a *UNESCO World Heritage site.*  Somya Pertiwi designed the UNESCO proposal for the Ministry.",
         },
         {
           stat: {
