@@ -1,6 +1,8 @@
 @import "@/styles/variables.scss";
+
 .wrapper {
   margin: 0 auto;
+  width: min(calc(100% - 2 * 50px), calc(var(--part-width) + 50px * 2));
   .container {
     margin: 0 50px;
     max-width: var(--part-width);
@@ -17,6 +19,7 @@
       .text {
         font-size: 21px;
         text-align: center;
+        line-height: 1.6;
       }
 
       @media (max-width: 1100px), (max-height: 600px) {
@@ -36,100 +39,239 @@
         }
       }
     }
+
     .separator {
       border: none;
       height: $border;
       margin: 0 auto;
       background-color: $alternate;
     }
+
     .cards {
       display: grid;
-      cursor: pointer;
       gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       padding: 20px 0;
-      @media (max-width: 750px) {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      }
 
       .cardWrapper {
+        list-style-type: none;
+
         .card {
           border: solid $border $alternate;
           background: $background;
-          padding: 10px;
-          display: grid;
-          gap: 15px;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          height: 100%;
 
           .imageWrapper {
-            max-height: 200px;
-            grid-area: image;
-            margin: 0 auto;
-            .image {
-              clip-path: polygon(
-                20px 0%,
-                100% 0%,
-                100% calc(100% - 20px),
-                calc(100% - 20px) 100%,
-                0% 100%,
-                0% 20px
-              );
-              height: 100%;
-              width: 100%;
-              object-fit: cover;
-            }
+            margin-bottom: 5px;
           }
-          .name {
-            grid-area: name;
-            margin: auto;
-          }
-          .role,
-          .bio,
-          .tags {
-            font-size: 15px;
-            &.role {
-              grid-area: role;
-            }
-            &.bio {
-              grid-area: bio;
-            }
-            &.tags {
-              grid-area: tags;
-            }
-          }
-          grid-template-areas:
-            "image image"
-            "name tags"
-            "role bio";
 
-          @media (max-width: 1000px), (max-height: 600px) {
-            grid-template-areas:
-              "image name"
-              "image tags"
-              "image role"
-              "image bio";
-            .imageWrapper {
-              max-height: unset;
-            }
-            .name {
-              margin-left: 0;
-            }
+          .titleContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 5px;
           }
-          @media (max-width: 750px), (max-height: 350px) {
-            grid-template-areas:
-              "image"
-              "name"
-              "tags"
-              "role"
-              "bio";
-            .imageWrapper {
-              max-height: unset;
-            }
-            .name {
-              margin: auto;
-            }
+
+          .name {
+            font-size: 1.2em;
+          }
+
+          .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
           }
         }
       }
     }
   }
+
+  .imageWrapper {
+    max-height: 200px;
+    max-width: 200px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    * {
+      height: 100%;
+      width: 100%;
+    }
+    .image {
+      clip-path: polygon(
+        20px 0%,
+        100% 0%,
+        100% calc(100% - 20px),
+        calc(100% - 20px) 100%,
+        0% 100%,
+        0% 20px
+      );
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .overlayBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: transparentize($background, 0.2);
+    backdrop-filter: blur(4px);
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .overlayContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    padding: $header-height 20px 20px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    pointer-events: none;
+    overflow: hidden;
+
+    .overlayCardWrapper {
+      pointer-events: auto;
+      max-width: min(800px, calc(100%));
+      width: 100%;
+      max-height: 100%;
+      display: flex;
+
+      .overlayCard {
+        border: solid $border $alternate;
+        background-color: $background;
+        padding: 25px;
+        width: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 25px;
+        z-index: 100;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        .imageWrapper {
+          flex-shrink: 0;
+          width: 200px;
+        }
+
+        .textColumn {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          gap: 15px;
+        }
+
+        .titleContainer {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+
+          .name {
+            font-size: 1.5em;
+          }
+
+          .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 8px;
+          }
+        }
+
+        .overlayDetails {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .role,
+          .bio {
+            font-size: 21px;
+            line-height: 1.6;
+          }
+
+          .role {
+            color: $accent;
+          }
+
+          .bio {
+            color: $foreground;
+          }
+
+          @media (max-width: 1100px), (max-height: 600px) {
+            .role,
+            .bio {
+              font-size: 18px;
+            }
+          }
+          @media (max-width: 750px), (max-height: 350px) {
+            .role,
+            .bio {
+              font-size: 15px;
+            }
+          }
+        }
+
+        @media (max-width: 750px) {
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+          gap: 20px;
+
+          .imageWrapper {
+            width: auto;
+            max-width: 250px;
+            margin-bottom: 0;
+          }
+
+          .textColumn {
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+          }
+
+          .titleContainer {
+            align-items: center;
+            text-align: center;
+            .tags {
+              justify-content: center;
+            }
+          }
+
+          .overlayDetails {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tag {
+  border: solid 1px;
+  padding: 3px 10px;
+  font-size: 0.85em;
+  white-space: nowrap;
+  border: solid $border $alternate;
 }
