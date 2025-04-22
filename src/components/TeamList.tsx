@@ -70,7 +70,6 @@ export default function TeamList(props: TeamListProps) {
             key={`overlay-${openIndex}-${header}`}
             id={people[openIndex].name + openIndex}
             person={people[openIndex]}
-            index={openIndex}
             close={closePerson}
           />
         )}
@@ -161,12 +160,11 @@ function Person({ index, person, open, id }: PersonProps) {
 
 interface PersonOverlayProps {
   person: PersonData;
-  index: number;
   id: string;
   close: () => void;
 }
 
-function PersonOverlay({ person, index, close, id }: PersonOverlayProps) {
+function PersonOverlay({ person, close, id }: PersonOverlayProps) {
   const { name, img, tags, role, bio } = person;
 
   return (
