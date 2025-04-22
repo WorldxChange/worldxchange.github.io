@@ -54,7 +54,8 @@ export default function TeamList(props: TeamListProps) {
         <motion.ul className={styles.cards}>
           {people.map((person, index) => (
             <Person
-              key={index}
+              key={person.name + index}
+              id={person.name + index}
               index={index}
               person={person}
               open={openPerson}
@@ -66,7 +67,8 @@ export default function TeamList(props: TeamListProps) {
       <AnimatePresence>
         {openIndex !== null && (
           <PersonOverlay
-            key={`overlay-${openIndex}`}
+            key={`overlay-${openIndex}-${header}`}
+            id={people[openIndex].name + openIndex}
             person={people[openIndex]}
             index={openIndex}
             close={closePerson}
@@ -79,11 +81,12 @@ export default function TeamList(props: TeamListProps) {
 
 interface PersonProps {
   index: number;
+  id: string;
   person: PersonData;
   open: (index: number) => void;
 }
 
-function Person({ index, person, open }: PersonProps) {
+function Person({ index, person, open, id }: PersonProps) {
   const { name, img, tags } = person;
 
   return (
@@ -109,7 +112,7 @@ function Person({ index, person, open }: PersonProps) {
     >
       <motion.div
         className={styles.card}
-        layoutId={`person-card-${index}`}
+        layoutId={`person-card-${id}`}
         initial={{ x: 0, y: 0, boxShadow: "0px 0px 0px var(--accent)" }}
         whileHover={{
           x: 3,
@@ -120,9 +123,9 @@ function Person({ index, person, open }: PersonProps) {
       >
         <motion.div
           className={styles.imageWrapper}
-          layoutId={`person-image-wrapper-${index}`}
+          layoutId={`person-image-wrapper-${id}`}
         >
-          <motion.div layoutId={`person-image-${index}`}>
+          <motion.div layoutId={`person-image-${id}`}>
             <Image
               className={styles.image}
               src={img}
@@ -135,7 +138,7 @@ function Person({ index, person, open }: PersonProps) {
         </motion.div>
         <motion.div
           className={styles.titleContainer}
-          layoutId={`person-title-container-${index}`}
+          layoutId={`person-title-container-${id}`}
           layout="position"
         >
           <h4 className={styles.name}>{name}</h4>
@@ -159,10 +162,11 @@ function Person({ index, person, open }: PersonProps) {
 interface PersonOverlayProps {
   person: PersonData;
   index: number;
+  id: string;
   close: () => void;
 }
 
-function PersonOverlay({ person, index, close }: PersonOverlayProps) {
+function PersonOverlay({ person, index, close, id }: PersonOverlayProps) {
   const { name, img, tags, role, bio } = person;
 
   return (
@@ -180,7 +184,7 @@ function PersonOverlay({ person, index, close }: PersonOverlayProps) {
         <div className={styles.overlayCardWrapper}>
           <motion.div
             className={styles.overlayCard}
-            layoutId={`person-card-${index}`}
+            layoutId={`person-card-${id}`}
             onClick={(e) => e.stopPropagation()}
             initial={{
               boxShadow: "0 0 0 1px var(--accent)",
@@ -188,9 +192,9 @@ function PersonOverlay({ person, index, close }: PersonOverlayProps) {
           >
             <motion.div
               className={styles.imageWrapper}
-              layoutId={`person-image-wrapper-${index}`}
+              layoutId={`person-image-wrapper-${id}`}
             >
-              <motion.div layoutId={`person-image-${index}`}>
+              <motion.div layoutId={`person-image-${id}`}>
                 <Image
                   className={styles.image}
                   src={img}
@@ -202,7 +206,7 @@ function PersonOverlay({ person, index, close }: PersonOverlayProps) {
             </motion.div>
             <motion.div
               className={styles.titleContainer}
-              layoutId={`person-title-container-${index}`}
+              layoutId={`person-title-container-${id}`}
               layout="position"
             >
               <h4 className={styles.name}>{name}</h4>

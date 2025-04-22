@@ -50,7 +50,7 @@
     .cards {
       display: grid;
       gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, min(minmax(280px, 1fr), 400px));
       padding: 20px 0;
 
       .cardWrapper {
@@ -206,7 +206,7 @@
 
           .role,
           .bio {
-            font-size: 21px;
+            font-size: 18px;
             line-height: 1.6;
           }
 
@@ -218,12 +218,6 @@
             color: $foreground;
           }
 
-          @media (max-width: 1100px), (max-height: 600px) {
-            .role,
-            .bio {
-              font-size: 18px;
-            }
-          }
           @media (max-width: 750px), (max-height: 350px) {
             .role,
             .bio {
