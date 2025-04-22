@@ -202,13 +202,9 @@
         .overlayDetails {
           display: flex;
           flex-direction: column;
-          gap: 10px;
-
-          .role,
-          .bio {
-            font-size: 18px;
-            line-height: 1.6;
-          }
+          gap: 1em;
+          font-size: 18px;
+          line-height: 1.25;
 
           .role {
             color: $accent;
@@ -219,10 +215,7 @@
           }
 
           @media (max-width: 750px), (max-height: 350px) {
-            .role,
-            .bio {
-              font-size: 15px;
-            }
+            font-size: 15px;
           }
         }
 
