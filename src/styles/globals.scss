@@ -9,7 +9,8 @@
     --part-width: 600px;
   }
   --cursor: #88888e;
-  --foreground: #ffffff;
+  --foreground: #{$white};
+  --accent: #{$accent};
 }
 ::selection {
   background-color: $highlight;
@@ -48,7 +49,7 @@ body > main {
   > div:has(.next-error-h1) {
     height: calc(100dvh - $header-height) !important;
     h1.next-error-h1 {
-      border-right-color: #ffffff80 !important;
+      border-right-color: transparentize($white, 0.5) !important;
     }
   }
   > :last-child {

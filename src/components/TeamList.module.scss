@@ -1,0 +1,135 @@
+@import "@/styles/variables.scss";
+.wrapper {
+  margin: 0 auto;
+  .container {
+    margin: 0 50px;
+    max-width: var(--part-width);
+    display: flex;
+    flex-flow: column nowrap;
+    .label {
+      text-align: center;
+      margin: 0 auto 15px;
+      max-width: max(450px, 20em);
+      .header {
+        font-size: 50px;
+        padding-bottom: 0.25em;
+      }
+      .text {
+        font-size: 21px;
+        text-align: center;
+      }
+
+      @media (max-width: 1100px), (max-height: 600px) {
+        .header {
+          font-size: 40px;
+        }
+        .text {
+          font-size: 18px;
+        }
+      }
+      @media (max-width: 750px), (max-height: 350px) {
+        .header {
+          font-size: 32px;
+        }
+        .text {
+          font-size: 15px;
+        }
+      }
+    }
+    .separator {
+      border: none;
+      height: $border;
+      margin: 0 auto;
+      background-color: $alternate;
+    }
+    .cards {
+      display: grid;
+      cursor: pointer;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      padding: 20px 0;
+      @media (max-width: 750px) {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+
+      .cardWrapper {
+        .card {
+          border: solid $border $alternate;
+          background: $background;
+          padding: 10px;
+          display: grid;
+          gap: 15px;
+
+          .imageWrapper {
+            max-height: 200px;
+            grid-area: image;
+            margin: 0 auto;
+            .image {
+              clip-path: polygon(
+                20px 0%,
+                100% 0%,
+                100% calc(100% - 20px),
+                calc(100% - 20px) 100%,
+                0% 100%,
+                0% 20px
+              );
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+          .name {
+            grid-area: name;
+            margin: auto;
+          }
+          .role,
+          .bio,
+          .tags {
+            font-size: 15px;
+            &.role {
+              grid-area: role;
+            }
+            &.bio {
+              grid-area: bio;
+            }
+            &.tags {
+              grid-area: tags;
+            }
+          }
+          grid-template-areas:
+            "image image"
+            "name tags"
+            "role bio";
+
+          @media (max-width: 1000px), (max-height: 600px) {
+            grid-template-areas:
+              "image name"
+              "image tags"
+              "image role"
+              "image bio";
+            .imageWrapper {
+              max-height: unset;
+            }
+            .name {
+              margin-left: 0;
+            }
+          }
+          @media (max-width: 750px), (max-height: 350px) {
+            grid-template-areas:
+              "image"
+              "name"
+              "tags"
+              "role"
+              "bio";
+            .imageWrapper {
+              max-height: unset;
+            }
+            .name {
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

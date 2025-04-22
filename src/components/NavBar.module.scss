@@ -12,7 +12,7 @@
     padding: 0px 16px;
     max-width: $header-width;
     margin: 0 auto;
-    color: white;
+    color: $white;
     font-size: 12px;
 
     .title {
@@ -31,7 +31,7 @@
         li {
           list-style-type: none;
           opacity: 0.6;
-          border-bottom: $border solid #ffffff00;
+          border-bottom: $border solid transparentize($white, 1);
           a {
             display: inline-block;
             line-height: calc($header-height - 1px);
@@ -41,16 +41,17 @@
 
           &.action {
             opacity: 1;
-            border-bottom: none;
+            margin-left: 10px;
             a {
+              margin: calc(($header-height - $border - 24px) / 2) 0;
               display: inline-flex;
               align-items: center;
-              margin-left: 10px;
               padding: 7px 10px;
               height: 24px;
               opacity: 1;
               line-height: 12px;
               background-color: $button;
+              color: $button-color !important;
               border-radius: 15px;
             }
           }

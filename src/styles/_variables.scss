@@ -8,11 +8,12 @@ $border: 1px;
 $background: #000000;
 $foreground: #ffffff;
 $alternate: #6e6e73;
+$white: #ffffff;
+$grey: transparentize($white, 0.55); // #aaaaaacb
 $accent: #03ff40;
 $button: #226726;
+$button-color: $white;
 $highlight: #226726;
-$grey: #fff7; // #aaaaaacb
-$white: #ffffff;
 
 // $footer: #f5f5f7;
 // $footer-text: #000000bb;

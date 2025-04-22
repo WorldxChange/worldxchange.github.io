@@ -54,7 +54,7 @@
       .stat {
         max-width: 340px;
         width: 100%;
-        flex-basis: 300px;
+        flex-basis: auto;
         .statNumber {
           user-select: none;
           .number {

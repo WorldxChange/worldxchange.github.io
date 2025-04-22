@@ -13,6 +13,7 @@
     .stat {
       max-width: unset !important;
       flex: 1 0 200px;
+      width: min(max(250px, 15vw), 400px) !important;
       height: unset !important;
       display: flex;
       flex-flow: column nowrap;
@@ -23,6 +24,7 @@
       }
       .statText {
         max-width: 340px;
+        margin-right: auto;
       }
     }
     padding: 0;
