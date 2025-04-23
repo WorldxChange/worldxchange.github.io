@@ -44,13 +44,6 @@ export default function TeamList(props: TeamListProps) {
           <h3 className={styles.header}>{ColorText(header, false)}</h3>
           {text && <p className={styles.text}>{ColorText(text)}</p>}
         </div>
-        <motion.hr
-          className={styles.separator}
-          initial={{ width: 0, opacity: 0 }}
-          whileInView={{ width: "80%", opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-          viewport={{ once: true }}
-        />
         <motion.ul className={styles.cards}>
           {people.map((person, index) => (
             <Person
@@ -154,17 +147,9 @@ function Person({ index, person, open, id }: PersonProps) {
 
 function Tag({ tag }: { tag: TagData }) {
   return (
-    <motion.button
-      className={styles.tag}
-      style={{ borderColor: tag.color }}
-      onClick={(e) => {
-        tag.setActive(!tag.active);
-        console.log(tag.tag, tag.active);
-        e.stopPropagation();
-      }}
-    >
+    <motion.span className={styles.tag} style={{ borderColor: tag.color }}>
       {tag.tag}
-    </motion.button>
+    </motion.span>
   );
 }
 
@@ -223,9 +208,9 @@ function PersonOverlay({ person, close, id }: PersonOverlayProps) {
             </motion.div>
             <motion.div
               className={styles.overlayDetails}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.3 }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.15, duration: 0.3, ease: easeOut }}
             >
               {role && <p className={styles.role}>{ColorText(role)}</p>}
               {bio && <p className={styles.bio}>{ColorText(bio)}</p>}
@@ -240,18 +225,13 @@ function PersonOverlay({ person, close, id }: PersonOverlayProps) {
 export type TagData = {
   tag: string;
   color: string;
-  active: boolean;
-  setActive: (value: boolean) => void;
 };
 export class TagCollection {
   tags: Record<string, string>;
-  active: Record<string, [boolean, (value: boolean) => void]>;
   constructor(...tags: [string, string][]) {
     this.tags = {};
-    this.active = {};
     tags.forEach(([tag, color]) => {
       this.tags[tag] = color;
-      this.active[tag] = useState(false);
     });
   }
   get(...tags: string[]): TagData[] {
@@ -261,28 +241,12 @@ export class TagCollection {
         return {
           tag,
           color: "var(--foreground)",
-          setActive: () => {},
-          active: false,
         };
       }
       return {
         tag,
         color: this.tags[tag],
-        active: this.active[tag][0],
-        setActive: this.active[tag][1],
       };
     });
-  }
-  toggle(tag: string) {
-    if (this.tags[tag]) {
-      if (!this.active[tag] || Object.values(this.active).some(([v]) => v)) {
-        this.active[tag][1](!this.active[tag][0]);
-      }
-    } else {
-      console.warn(`Toggled tag "${tag}" not found in collection.`);
-    }
-  }
-  filtered(): boolean {
-    return Object.keys(this.tags).some((tag) => !this.active[tag][0]);
   }
 }

@@ -2,16 +2,20 @@
 
 .wrapper {
   margin: 0 auto;
-  width: min(calc(100% - 2 * 50px), calc(var(--part-width) + 50px * 2));
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .container {
     margin: 0 50px;
+    margin-bottom: 60px;
     max-width: var(--part-width);
     display: flex;
     flex-flow: column nowrap;
     .label {
       text-align: center;
       margin: 0 auto 15px;
-      max-width: max(450px, 20em);
+      max-width: max(450px, calc(300px + 15em));
       .header {
         font-size: 50px;
         padding-bottom: 0.25em;
@@ -55,9 +59,12 @@
       padding: 20px 0;
 
       .cardWrapper {
-        flex: 1 1 300px;
-        max-width: 400px;
+        flex: 1 1 250px;
+        max-width: calc(200px + 15px * 2 + $border * 2);
         list-style-type: none;
+        @media (max-width: 750px) {
+          max-width: 300px;
+        }
 
         .card {
           border: solid $border $alternate;
@@ -89,7 +96,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 5px;
+            gap: 10px;
           }
         }
       }
@@ -126,6 +133,7 @@
     width: 100dvw;
     height: 100dvh;
     background-color: transparentize($background, 0.2);
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     z-index: 10;
     cursor: pointer;
@@ -137,7 +145,7 @@
     left: 0;
     width: 100dvw;
     height: 100dvh;
-    padding: $header-height 20px 20px 20px;
+    padding: calc($header-height + 20px) 20px 20px 20px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
