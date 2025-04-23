@@ -11,6 +11,11 @@ export const nav: {
   ],
 };
 
+export const contact = {
+  email: "wxc.bali@gmail.com",
+  subject: "World x Change Inquiry",
+};
+
 export const footerLinks = {
   "/": "Home",
   "/wins": "WINs",
