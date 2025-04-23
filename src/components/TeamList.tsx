@@ -191,45 +191,47 @@ function PersonOverlay({ person, close, id }: PersonOverlayProps) {
             layoutId={`person-card-${id}`}
             onClick={(e) => e.stopPropagation()}
           >
-            <motion.div
-              className={styles.imageWrapper}
-              layoutId={`person-image-wrapper-${id}`}
-            >
-              <motion.div layoutId={`person-image-${id}`}>
-                <Image
-                  className={styles.image}
-                  src={img}
-                  alt={`${name} profile picture`}
-                  width={200}
-                  height={200}
-                />
+            <div className={styles.overlayCardContents}>
+              <motion.div
+                className={styles.imageWrapper}
+                layoutId={`person-image-wrapper-${id}`}
+              >
+                <motion.div layoutId={`person-image-${id}`}>
+                  <Image
+                    className={styles.image}
+                    src={img}
+                    alt={`${name} profile picture`}
+                    width={200}
+                    height={200}
+                  />
+                </motion.div>
               </motion.div>
-            </motion.div>
-            <motion.div
-              className={styles.titleContainer}
-              layoutId={`person-title-container-${id}`}
-              layout="position"
-            >
-              <h4 className={styles.name}>{name}</h4>
-              <div className={styles.tags}>
-                {tags.map((tag, tagIndex) => (
-                  <Tag key={tagIndex} tag={tag} long={true} />
-                ))}
-              </div>
-            </motion.div>
-            <motion.div
-              className={styles.overlayDetails}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.15, duration: 0.3, ease: easeOut }}
-            >
-              {role && (
-                <p className={styles.role}>{ColorText(role, true, true)}</p>
-              )}
-              {bio && (
-                <p className={styles.bio}>{ColorText(bio, true, true)}</p>
-              )}
-            </motion.div>
+              <motion.div
+                className={styles.titleContainer}
+                layoutId={`person-title-container-${id}`}
+                layout="position"
+              >
+                <h4 className={styles.name}>{name}</h4>
+                <div className={styles.tags}>
+                  {tags.map((tag, tagIndex) => (
+                    <Tag key={tagIndex} tag={tag} long={true} />
+                  ))}
+                </div>
+              </motion.div>
+              <motion.div
+                className={styles.overlayDetails}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.15, duration: 0.3, ease: easeOut }}
+              >
+                {role && (
+                  <p className={styles.role}>{ColorText(role, true, true)}</p>
+                )}
+                {bio && (
+                  <p className={styles.bio}>{ColorText(bio, true, true)}</p>
+                )}
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
