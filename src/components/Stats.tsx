@@ -24,7 +24,7 @@ export type Stat = {
     /** The formatting options for the number */
     format?: FormatOptions;
   };
-  /** The main body text for the stat that renders below the number line */
+  /** The main body text for the stat that renders below the number line. May include HTML */
   text: string;
 };
 
@@ -92,7 +92,7 @@ export default function Stats(props: {
               },
             }}
           >
-            {ColorText(entry.text)}
+            {ColorText(entry.text, true, true)}
           </motion.p>
         </motion.div>
       ))}

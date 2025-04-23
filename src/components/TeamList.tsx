@@ -6,11 +6,17 @@ import { easeOut } from "motion";
 import { useState } from "react";
 
 type PersonData = {
+  /** The person's name */
   name: string;
+  /** Profile picture image path */
   img: string;
-  link: string;
+  /** Outlink for the person */
+  link?: string;
+  /** Tag objects to show on their profile */
   tags: TagData[];
+  /** Optional role paragraph. May include HTML */
   role?: string;
+  /** Optional bio paragraph. May include HTML */
   bio?: string;
 };
 
@@ -212,8 +218,12 @@ function PersonOverlay({ person, close, id }: PersonOverlayProps) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.15, duration: 0.3, ease: easeOut }}
             >
-              {role && <p className={styles.role}>{ColorText(role)}</p>}
-              {bio && <p className={styles.bio}>{ColorText(bio)}</p>}
+              {role && (
+                <p className={styles.role}>{ColorText(role, true, true)}</p>
+              )}
+              {bio && (
+                <p className={styles.bio}>{ColorText(bio, true, true)}</p>
+              )}
             </motion.div>
           </motion.div>
         </div>

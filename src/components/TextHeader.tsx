@@ -8,7 +8,7 @@ export interface TextHeaderProps extends PageParts {
     section?: string;
     /** The header (the title of the text) */
     header?: string;
-    /** The text (the main body copy of the text) */
+    /** The text (the main body copy of the text). May include HTML*/
     text: string;
   };
 }
@@ -26,7 +26,7 @@ export function TextHeader(props: TextHeaderProps) {
     <motion.div className={styles.container}>
       {section && <h1 className={styles.section}>{ColorText(section)}</h1>}
       {header && <h2 className={styles.header}>{ColorText(header, false)}</h2>}
-      {text && <p className={styles.text}>{ColorText(text, false)}</p>}
+      {text && <p className={styles.text}>{ColorText(text, false, true)}</p>}
     </motion.div>
   );
 }

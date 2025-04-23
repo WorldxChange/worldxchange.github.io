@@ -5,11 +5,16 @@ import styles from "./CenterHeader.module.scss";
 export interface CenterHeaderProps extends PageParts {
   data:
     | {
+        /** Header text*/
         header: string;
+
+        /** Optional contents text. May include HTML */
         text?: string;
       }
     | {
+        /** Optional header text*/
         header?: string;
+        /** Contents text. May include HTML */
         text: string;
       };
 }
@@ -28,7 +33,7 @@ export default function CenterHeader(props: CenterHeaderProps) {
         {header && (
           <h2 className={styles.header}>{ColorText(header, false)}</h2>
         )}
-        {text && <p className={styles.text}>{ColorText(text, false)}</p>}
+        {text && <p className={styles.text}>{ColorText(text, false, true)}</p>}
       </div>
     </motion.div>
   );
