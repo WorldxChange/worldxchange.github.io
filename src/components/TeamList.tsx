@@ -143,18 +143,28 @@ function Person({ index, person, open, id }: PersonProps) {
           <h4 className={styles.name}>{name}</h4>
           <div className={styles.tags}>
             {tags.map((tag, tagIndex) => (
-              <motion.span
-                key={tagIndex}
-                className={styles.tag}
-                style={{ borderColor: tag.color }}
-              >
-                {tag.tag}
-              </motion.span>
+              <Tag key={tagIndex} tag={tag} />
             ))}
           </div>
         </motion.div>
       </motion.div>
     </motion.li>
+  );
+}
+
+function Tag({ tag }: { tag: TagData }) {
+  return (
+    <motion.button
+      className={styles.tag}
+      style={{ borderColor: tag.color }}
+      onClick={(e) => {
+        tag.setActive(!tag.active);
+        console.log(tag.tag, tag.active);
+        e.stopPropagation();
+      }}
+    >
+      {tag.tag}
+    </motion.button>
   );
 }
 
@@ -184,9 +194,6 @@ function PersonOverlay({ person, close, id }: PersonOverlayProps) {
             className={styles.overlayCard}
             layoutId={`person-card-${id}`}
             onClick={(e) => e.stopPropagation()}
-            initial={{
-              boxShadow: "0 0 0 1px var(--accent)",
-            }}
           >
             <motion.div
               className={styles.imageWrapper}
@@ -210,13 +217,7 @@ function PersonOverlay({ person, close, id }: PersonOverlayProps) {
               <h4 className={styles.name}>{name}</h4>
               <div className={styles.tags}>
                 {tags.map((tag, tagIndex) => (
-                  <motion.span
-                    key={tagIndex}
-                    className={styles.tag}
-                    style={{ borderColor: tag.color }}
-                  >
-                    {tag.tag}
-                  </motion.span>
+                  <Tag key={tagIndex} tag={tag} />
                 ))}
               </div>
             </motion.div>
@@ -236,28 +237,52 @@ function PersonOverlay({ person, close, id }: PersonOverlayProps) {
   );
 }
 
-type TagData = {
+export type TagData = {
   tag: string;
   color: string;
+  active: boolean;
+  setActive: (value: boolean) => void;
 };
 export class TagCollection {
   tags: Record<string, string>;
+  active: Record<string, [boolean, (value: boolean) => void]>;
   constructor(...tags: [string, string][]) {
     this.tags = {};
+    this.active = {};
     tags.forEach(([tag, color]) => {
       this.tags[tag] = color;
+      this.active[tag] = useState(false);
     });
   }
   get(...tags: string[]): TagData[] {
     return tags.map((tag) => {
       if (!this.tags[tag]) {
         console.warn(`Tag "${tag}" not found in collection.`);
-        return { tag, color: "var(--foreground)" };
+        return {
+          tag,
+          color: "var(--foreground)",
+          setActive: () => {},
+          active: false,
+        };
       }
       return {
         tag,
         color: this.tags[tag],
+        active: this.active[tag][0],
+        setActive: this.active[tag][1],
       };
     });
+  }
+  toggle(tag: string) {
+    if (this.tags[tag]) {
+      if (!this.active[tag] || Object.values(this.active).some(([v]) => v)) {
+        this.active[tag][1](!this.active[tag][0]);
+      }
+    } else {
+      console.warn(`Toggled tag "${tag}" not found in collection.`);
+    }
+  }
+  filtered(): boolean {
+    return Object.keys(this.tags).some((tag) => !this.active[tag][0]);
   }
 }

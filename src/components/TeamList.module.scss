@@ -48,12 +48,15 @@
     }
 
     .cards {
-      display: grid;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
       gap: 20px;
-      grid-template-columns: repeat(auto-fit, min(minmax(280px, 1fr), 400px));
       padding: 20px 0;
 
       .cardWrapper {
+        flex: 1 1 300px;
+        max-width: 400px;
         list-style-type: none;
 
         .card {
@@ -151,7 +154,7 @@
       display: flex;
 
       .overlayCard {
-        border: solid $border $alternate;
+        border: solid $border $accent;
         background-color: $background;
         padding: 25px;
         width: 100%;
@@ -258,7 +261,7 @@
 .tag {
   border: solid 1px;
   padding: 3px 10px;
-  font-size: 0.85em;
+  font-size: 0.75em;
   white-space: nowrap;
   border: solid $border $alternate;
 }
