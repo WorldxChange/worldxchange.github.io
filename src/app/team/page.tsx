@@ -98,8 +98,8 @@ export default makePageStream([
           tags: tags.get("Sc"),
           role: "Singapore University of Social Science",
           bio: "",
-        },
-       /* {
+        },       
+        /* {
           name: "Nathalie Goodkin",
           img: "/img/team/ng.jpeg",
           link: "",
@@ -107,6 +107,22 @@ export default makePageStream([
           role: "American Museum of Natural History",
           bio: "",
         },*/
+       {
+          name: "Jani Tanzil",
+          img: "/img/team/jt.jpeg",
+          link: "",
+          tags: tags.get("Sc"),
+          role: "St. John's Island National Marine Laboratory",
+          bio: "",
+        },//*/
+    {
+          name: "Renée Smits",
+          img: "/img/team/rs.jpeg",
+          link: "",
+          tags: tags.get("St"),
+          role: "Rabobank, Restore the Legacy",
+          bio: "",
+        },//*/
       ],
     },
   }, //end of component
