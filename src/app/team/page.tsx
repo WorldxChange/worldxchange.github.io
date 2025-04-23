@@ -31,7 +31,7 @@ export default makePageStream([
           img: "/img/team/steve.jpeg",
           link: "",
           tags: tags.get("Sc", "En", "St", "Ag"),
-          role: "Santa Fe Institute, Complexity Science Hub Vienna, and Somya Pertiwi",
+          role: "Santa Fe Institute, Complexity Science Hub, and Somya Pertiwi",
           bio: "",
         },
         {
@@ -50,14 +50,14 @@ export default makePageStream([
           role: "Carnegie Mellon University",
           bio: "",
         },
-        {
+       /* {
           name: "Kha-Ai Tran",
           img: "/img/team/default.jpg",
           link: "",
           tags: tags.get("Sc", "En"),
           role: "",
           bio: "",
-        },
+        },*/
         {
           name: "Sander Vonk",
           img: "/img/team/sander.png",
@@ -80,11 +80,11 @@ export default makePageStream([
   {
     component: TeamList,
     data: {
-      header: "Bali Core",
-      text: "From ideas to results.",
+      header: "Bali",
+      text: "From **ideas** to *results.*",
       people: [
         {
-          name: "Wyan Alit Arthawigina",
+          name: "Wayan Alit Arthawigina",
           img: "/img/team/alit.jpg",
           link: "",
           tags: tags.get("Sc", "En", "St", "Ag"),
@@ -99,14 +99,22 @@ export default makePageStream([
           role: "Singapore University of Social Science",
           bio: "",
         },
+       /* {
+          name: "Nathalie Goodkin",
+          img: "/img/team/ng.jpeg",
+          link: "",
+          tags: tags.get("Sc"),
+          role: "American Museum of Natural History",
+          bio: "",
+        },*/
       ],
     },
   }, //end of component
   {
     component: TeamList,
     data: {
-      header: "Extended",
-      text: "Engaging with ideas and advice.",
+      header: "Network",
+      text: "Generating *insights,* advice, and other **key contributions.**",
       people: [
         {
           name: "Ross Buhrdorf",
@@ -116,38 +124,38 @@ export default makePageStream([
           role: "ZenBusiness, Inc.",
           bio: "",
         },
-        {
+       /* {
           name: "Bjoern Ole Sander",
           img: "/img/team/ole.png",
           link: "",
           tags: tags.get("Sc", "Ag"),
           role: "International Rice Research Institute",
           bio: "",
-        },
-        {
+        },*/
+       /* {
           name: "Anton Urfels",
           img: "/img/team/anton.jpg",
           link: "",
           tags: tags.get("Sc", "Ag"),
           role: "CGIAR",
           bio: "",
-        },
-        {
+        },*/
+        /*{
           name: "Kazuki Saito",
           img: "/img/team/kazuki.png",
           link: "",
           tags: tags.get("Sc", "Ag"),
           role: "International Rice Research Institute",
           bio: "",
-        },
-        {
+        },*/
+       /* {
           name: "John Lansing",
           img: "/img/team/jc.jpg",
           link: "",
           tags: tags.get("St"),
           role: "Hahn and Hahn LLP",
           bio: "",
-        },
+        },*/
         {
           name: "Chris Kempes",
           img: "/img/team/chris.jpeg",
@@ -156,14 +164,14 @@ export default makePageStream([
           role: "Santa Fe Institute",
           bio: "",
         },
-        {
+       /* {
           name: "Gabrielle B. Dreyfus",
           img: "/img/team/gabrielle.jpg",
           link: "",
           tags: tags.get("Sc"),
           role: "Institute for Governance and Sustainable Development",
           bio: "",
-        },
+        },*/
         {
           name: "Hayden Bernhardt",
           img: "/img/team/hayden.jpeg",
@@ -205,14 +213,22 @@ export default makePageStream([
           role: "Pittsburgh, PA USA",
           bio: "",
         },
-        {
+       /* {
           name: "Max Plank Institute",
           img: "/img/team/mp.png",
           link: "",
           tags: tags.get("Sc"),
           role: "",
           bio: "",
-        },
+        },*/
+       /* {
+          name: "Complexity Science Hub",
+          img: "/img/team/csh.png",
+          link: "",
+          tags: tags.get("Sc"),
+          role: "",
+          bio: "",
+        },*/
       ],
     },
   }, //end of component

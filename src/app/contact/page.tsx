@@ -7,10 +7,9 @@ export default function ContactPage() {
   return (
     <div className={`${centerStyles.wrapper} ${styles.wrapper}`}>
       <div className={centerStyles.container}>
-        <h2 className={centerStyles.header}>Contact Us</h2>
+        <h2 className={centerStyles.header}>Connect</h2>
         <p className={centerStyles.text}>
-          If you have any questions or feedback, feel free to reach out! Our
-          team is always happy to help—use the button below to send us an email!
+          Contact us with any questions or feedback. 
         </p>
         <motion.a
           href={`mailto:${contact.email}?subject=${encodeURIComponent(
@@ -56,7 +55,7 @@ export default function ContactPage() {
           }}
           className={styles.contact}
         >
-          Email the Team
+          Email WxC
         </motion.a>
       </div>
     </div>
