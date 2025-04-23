@@ -3,12 +3,12 @@ import { makePageStream } from "@/app/constants";
 import CenterHeader from "@/components/CenterHeader";
 import TeamList, { TagCollection } from "@/components/TeamList";
 const tags = new TagCollection(
-  ["Sc", "#02c43a"], //Science
-  ["En", "#DD6B3A"], //Engineering/Architecture
-  ["St", "#04C8CB"], //Strategy
-  ["Ag", "#A4F687"], //Agriculture
-  ["Ar", "#84DCCF"], //Art/Design
-  ["Ka", "#FFD700"] //Karma... 
+  ["Sc", "#02c43a", "Science"],
+  ["En", "#DD6B3A", "Engineering"],
+  ["St", "#04C8CB", "Strategy"],
+  ["Ag", "#A4F687", "Agriculture"],
+  ["Ar", "#84DCCF", "Art / Design"],
+  ["Ka", "#FFD700", "Karma..."]
 );
 
 export default makePageStream([
@@ -83,7 +83,7 @@ export default makePageStream([
       header: "Bali Core",
       text: "From ideas to results.",
       people: [
-       {
+        {
           name: "Wyan Alit Arthawigina",
           img: "/img/team/alit.jpg",
           link: "",
@@ -101,7 +101,7 @@ export default makePageStream([
         },
       ],
     },
-  },//end of component
+  }, //end of component
   {
     component: TeamList,
     data: {
@@ -140,7 +140,7 @@ export default makePageStream([
           role: "International Rice Research Institute",
           bio: "",
         },
-       {
+        {
           name: "John Lansing",
           img: "/img/team/jc.jpg",
           link: "",
@@ -148,7 +148,7 @@ export default makePageStream([
           role: "Hahn and Hahn LLP",
           bio: "",
         },
-       {
+        {
           name: "Chris Kempes",
           img: "/img/team/chris.jpeg",
           link: "",
@@ -164,7 +164,7 @@ export default makePageStream([
           role: "Institute for Governance and Sustainable Development",
           bio: "",
         },
-       {
+        {
           name: "Hayden Bernhardt",
           img: "/img/team/hayden.jpeg",
           link: "",
@@ -182,8 +182,8 @@ export default makePageStream([
         },
       ],
     },
-  },//end of component
-    {
+  }, //end of component
+  {
     component: TeamList,
     data: {
       header: "Organizations",
@@ -213,8 +213,7 @@ export default makePageStream([
           role: "",
           bio: "",
         },
-
       ],
     },
-  },//end of component
+  }, //end of component
 ]);
