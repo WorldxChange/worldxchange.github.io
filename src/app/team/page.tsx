@@ -3,10 +3,11 @@ import { makePageStream } from "@/app/constants";
 import CenterHeader from "@/components/CenterHeader";
 import TeamList, { TagCollection } from "@/components/TeamList";
 const tags = new TagCollection(
-  ["Development", "#44CF6C"],
-  ["Design", "#84DCCF"],
-  ["Research", "#DD403A"],
-  ["Other", "#aaa"]
+  ["Sc", "#02c43a"], //Science
+  ["Ar", "#84DCCF"], //Art/Design
+  ["En", "#DD6B3A"], //Engineering/Architecture
+  ["St", "#04C8CB"], //Strategy
+  ["Ag", "#A4F687"] //Agriculture
 );
 
 export default makePageStream([
@@ -14,51 +15,205 @@ export default makePageStream([
     component: CenterHeader,
     data: {
       header: "The Team",
-      text: "As scientists, engineers, and business professionals who are passionate about using technology to improve the world, we are committed to making a positive impact on the environment and society.",
+      text: "Passionate about using science and technology to improve the world.",
     },
   },
 
   {
     component: TeamList,
     data: {
-      header: "Research Team",
-      text: "Academics and researchers passionate about using technology to improve the world who envisioned this project.",
+      header: "Core",
+      text: "Envisioning and implementing the needed **ideas** and *infrastructure*.",
       people: [
         {
-          name: "John Miller",
+          name: "J. Stephen Lansing",
+          img: "/img/team/steve.jpeg",
+          link: "",
+          tags: tags.get("Sc", "St", "Ar", "En"),
+          role: "Santa Fe Institute, Complexity Science Hub Vienna, and Somya Pertiwi",
+          bio: "",
+        },
+        {
+          name: "John H. Miller",
           img: "/img/team/john.jpg",
-          link: "//www.santafe.edu/people/profile/john-h-miller",
-          tags: tags.get("Research", "Other"),
-          role: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta nisi eu pretium mollis. In eu porttitor tortor. Vestibulum vulputate ante condimentum nunc pellentesque molestie. Aenean mi arcu, congue vel tempus non, convallis a est. Integer non lobortis nibh.",
-          bio: "Suspendisse id libero id eros congue euismod ut in libero. Praesent non magna ac leo congue consequat quis vitae massa. Mauris rutrum risus felis, ac rhoncus nisi lobortis eu. Praesent blandit mi eu sapien tincidunt consectetur. Mauris ullamcorper sem vel mi laoreet faucibus.",
+          link: "//www.jhmsfi.com",
+          tags: tags.get("Sc", "St", "Ar", "En"),
+          role: "Carnegie Mellon University and the Santa Fe Institute",
+          bio: "",
+        },
+        {
+          name: "Emily Zuetell",
+          img: "/img/team/emily.jpeg",
+          link: "",
+          tags: tags.get("Sc", "En"),
+          role: "Carnegie Mellon University",
+          bio: "",
+        },
+        {
+          name: "Kha-Ai Tran",
+          img: "/img/team/default.jpg",
+          link: "",
+          tags: tags.get("Sc", "En"),
+          role: "",
+          bio: "",
         },
         {
           name: "Sander Vonk",
           img: "/img/team/sander.png",
           link: "//svonk.me",
-          tags: tags.get("Development", "Design"),
-          role: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta nisi eu pretium mollis. In eu porttitor tortor. Vestibulum vulputate ante condimentum nunc pellentesque molestie. Aenean mi arcu, congue vel tempus non, convallis a est. Integer non lobortis nibh.",
-          bio: "Suspendisse id libero id eros congue euismod ut in libero. Praesent non magna ac leo congue consequat quis vitae massa. Mauris rutrum risus felis, ac rhoncus nisi lobortis eu. Praesent blandit mi eu sapien tincidunt consectetur. Mauris ullamcorper sem vel mi laoreet faucibus.",
+          tags: tags.get("Ar", "En"),
+          role: "Carnegie Mellon University",
+          bio: "",
+        },
+        {
+          name: "Jeff Kersey",
+          img: "/img/team/jeff.jpg",
+          link: "",
+          tags: tags.get("St"),
+          role: "Jacobs, EXPO 2020 Dubai",
+          bio: "",
         },
       ],
     },
   },
   {
     component: TeamList,
-
     data: {
-      header: "Development Team",
-      text: "Volunteers who contribute their time and expertise to help us build and maintain our *online platform and* **web resources**.",
+      header: "Bali Core",
+      text: "From ideas to results.",
       people: [
+       {
+          name: "Wyan Alit Arthawigina",
+          img: "/img/team/alit.jpg",
+          link: "",
+          tags: tags.get("Sc", "St", "Ag", "En"),
+          role: "Somya Pertiwi",
+          bio: "",
+        },
         {
-          name: "Sander Vonk",
-          img: "/img/team/sander.png",
-          link: "//svonk.me",
-          tags: tags.get("Development", "Design"),
-          role: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta nisi eu pretium mollis. In eu porttitor tortor. Vestibulum vulputate ante condimentum nunc pellentesque molestie. Aenean mi arcu, congue vel tempus non, convallis a est. Integer non lobortis nibh.",
-          bio: "Suspendisse id libero id eros congue euismod ut in libero. Praesent non magna ac leo congue consequat quis vitae massa. Mauris rutrum risus felis, ac rhoncus nisi lobortis eu. Praesent blandit mi eu sapien tincidunt consectetur. Mauris ullamcorper sem vel mi laoreet faucibus.",
+          name: "Ning Ning Chung",
+          img: "/img/team/ningning.jpeg",
+          link: "",
+          tags: tags.get("Sc"),
+          role: "Singapore University of Social Science",
+          bio: "",
         },
       ],
     },
-  },
+  },//end of component
+  {
+    component: TeamList,
+    data: {
+      header: "Extended",
+      text: "Engaging with ideas and advice.",
+      people: [
+        {
+          name: "Ross Buhrdorf",
+          img: "/img/team/ross.png",
+          link: "",
+          tags: tags.get("St"),
+          role: "ZenBusiness, Inc.",
+          bio: "",
+        },
+        {
+          name: "Bjoern Ole Sander",
+          img: "/img/team/ole.png",
+          link: "",
+          tags: tags.get("Sc", "Ag"),
+          role: "International Rice Research Institute",
+          bio: "",
+        },
+        {
+          name: "Anton Urfels",
+          img: "/img/team/anton.jpg",
+          link: "",
+          tags: tags.get("Sc", "Ag"),
+          role: "CGIAR",
+          bio: "",
+        },
+        {
+          name: "Kazuki Saito",
+          img: "/img/team/kazuki.png",
+          link: "",
+          tags: tags.get("Sc", "Ag"),
+          role: "International Rice Research Institute",
+          bio: "",
+        },
+       {
+          name: "John Lansing",
+          img: "/img/team/jc.jpg",
+          link: "",
+          tags: tags.get("St"),
+          role: "Hahn and Hahn LLP",
+          bio: "",
+        },
+       {
+          name: "Chris Kempes",
+          img: "/img/team/chris.jpeg",
+          link: "",
+          tags: tags.get("Sc"),
+          role: "Santa Fe Institute",
+          bio: "",
+        },
+        {
+          name: "Gabrielle B. Dreyfus",
+          img: "/img/team/gabrielle.jpg",
+          link: "",
+          tags: tags.get("Sc"),
+          role: "Institute for Governance and Sustainable Development",
+          bio: "",
+        },
+       {
+          name: "Hayden Bernhardt",
+          img: "/img/team/hayden.jpeg",
+          link: "",
+          tags: tags.get("Ar"),
+          role: "Harvard University",
+          bio: "",
+        },
+        {
+          name: "Vibeke Sorensen",
+          img: "/img/team/vibeke.jpg",
+          link: "",
+          tags: tags.get("St", "Ar", "En"),
+          role: "",
+          bio: "",
+        },
+      ],
+    },
+  },//end of component
+    {
+    component: TeamList,
+    data: {
+      header: "Organizations",
+      text: "Supporting our efforts in various ways.",
+      people: [
+        {
+          name: "Santa Fe Institute",
+          img: "/img/team/sfi.png",
+          link: "",
+          tags: tags.get("Sc"),
+          role: "Santa Fe, NM USA",
+          bio: "",
+        },
+        {
+          name: "Carnegie Mellon University",
+          img: "/img/team/cmu.png",
+          link: "",
+          tags: tags.get("Sc"),
+          role: "Pittsburgh, PA USA",
+          bio: "",
+        },
+        {
+          name: "Max Plank Institute",
+          img: "/img/team/mp.png",
+          link: "",
+          tags: tags.get("Sc"),
+          role: "",
+          bio: "",
+        },
+
+      ],
+    },
+  },//end of component
 ]);
