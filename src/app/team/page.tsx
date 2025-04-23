@@ -4,10 +4,11 @@ import CenterHeader from "@/components/CenterHeader";
 import TeamList, { TagCollection } from "@/components/TeamList";
 const tags = new TagCollection(
   ["Sc", "#02c43a"], //Science
-  ["Ar", "#84DCCF"], //Art/Design
   ["En", "#DD6B3A"], //Engineering/Architecture
   ["St", "#04C8CB"], //Strategy
-  ["Ag", "#A4F687"] //Agriculture
+  ["Ag", "#A4F687"], //Agriculture
+  ["Ar", "#84DCCF"], //Art/Design
+  ["Ka", "#FFD700"] //Karma... 
 );
 
 export default makePageStream([
@@ -29,7 +30,7 @@ export default makePageStream([
           name: "J. Stephen Lansing",
           img: "/img/team/steve.jpeg",
           link: "",
-          tags: tags.get("Sc", "St", "En"),
+          tags: tags.get("Sc", "En", "St", "Ag"),
           role: "Santa Fe Institute, Complexity Science Hub Vienna, and Somya Pertiwi",
           bio: "",
         },
@@ -37,7 +38,7 @@ export default makePageStream([
           name: "John H. Miller",
           img: "/img/team/john.jpg",
           link: "//www.jhmsfi.com",
-          tags: tags.get("Sc", "St", "En"),
+          tags: tags.get("Sc", "En", "St", "Ar"),
           role: "Carnegie Mellon University and the Santa Fe Institute",
           bio: "",
         },
@@ -61,7 +62,7 @@ export default makePageStream([
           name: "Sander Vonk",
           img: "/img/team/sander.png",
           link: "//svonk.me",
-          tags: tags.get("Ar", "En"),
+          tags: tags.get("En", "Ar"),
           role: "Carnegie Mellon University",
           bio: "",
         },
@@ -86,7 +87,7 @@ export default makePageStream([
           name: "Wyan Alit Arthawigina",
           img: "/img/team/alit.jpg",
           link: "",
-          tags: tags.get("Sc", "St", "Ag", "En"),
+          tags: tags.get("Sc", "En", "St", "Ag"),
           role: "Somya Pertiwi",
           bio: "",
         },
@@ -175,7 +176,7 @@ export default makePageStream([
           name: "Vibeke Sorensen",
           img: "/img/team/vibeke.jpg",
           link: "",
-          tags: tags.get("St", "Ar", "En"),
+          tags: tags.get("En", "St", "Ar"),
           role: "",
           bio: "",
         },
