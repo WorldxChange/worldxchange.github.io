@@ -28,20 +28,20 @@ export default function ContactPage() {
             scaleY: 1,
             x: 0,
             y: 0,
-            boxShadow: "0px 0px 0 var(--accent)",
+            boxShadow: "0em 0em 0 var(--accent)",
           }}
           whileHover={{
-            x: 2,
-            y: -2,
-            boxShadow: "-4px 6px 0 var(--accent)",
+            x: "0.1em",
+            y: "-0.1em",
+            boxShadow: "-0.2em 0.2em 0 var(--accent)",
           }}
           whileTap={{
+            scale: 0.95,
             x: 0,
             y: 0,
-            boxShadow: "0px 0px 0 var(--accent)",
+            boxShadow: "0em 0em 0 var(--accent)",
             borderColor: "var(--accent)",
             color: "var(--accent)",
-            scale: 0.95,
           }}
           transition={{
             duration: 0.15,
