@@ -4,6 +4,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { easeOut } from "motion";
 import { useState } from "react";
+import { AnimateText } from "motion-plus/react";
 
 type PersonData = {
   /** The person's name */
@@ -151,14 +152,14 @@ function Person({ index, person, open, id }: PersonProps) {
   );
 }
 
-function Tag({ tag }: { tag: TagData }) {
+function Tag({ tag, long = false }: { tag: TagData; long?: boolean }) {
   return (
     <motion.span
       className={styles.tag}
       style={{ borderColor: tag.color }}
       title={tag.title}
     >
-      {tag.tag}
+      <AnimateText>{long ? tag.title : tag.tag}</AnimateText>
     </motion.span>
   );
 }
@@ -212,7 +213,7 @@ function PersonOverlay({ person, close, id }: PersonOverlayProps) {
               <h4 className={styles.name}>{name}</h4>
               <div className={styles.tags}>
                 {tags.map((tag, tagIndex) => (
-                  <Tag key={tagIndex} tag={tag} />
+                  <Tag key={tagIndex} tag={tag} long={true} />
                 ))}
               </div>
             </motion.div>
