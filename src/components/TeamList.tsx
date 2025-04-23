@@ -153,7 +153,11 @@ function Person({ index, person, open, id }: PersonProps) {
 
 function Tag({ tag }: { tag: TagData }) {
   return (
-    <motion.span className={styles.tag} style={{ borderColor: tag.color }}>
+    <motion.span
+      className={styles.tag}
+      style={{ borderColor: tag.color }}
+      title={tag.title}
+    >
       {tag.tag}
     </motion.span>
   );
@@ -235,13 +239,14 @@ function PersonOverlay({ person, close, id }: PersonOverlayProps) {
 export type TagData = {
   tag: string;
   color: string;
+  title: string;
 };
 export class TagCollection {
-  tags: Record<string, string>;
-  constructor(...tags: [string, string][]) {
+  tags: Record<string, { color: string; title: string }>;
+  constructor(...tags: [string, string, string?][]) {
     this.tags = {};
-    tags.forEach(([tag, color]) => {
-      this.tags[tag] = color;
+    tags.forEach(([tag, color, title = tag]) => {
+      this.tags[tag] = { color, title };
     });
   }
   get(...tags: string[]): TagData[] {
@@ -251,11 +256,12 @@ export class TagCollection {
         return {
           tag,
           color: "var(--foreground)",
+          title: tag,
         };
       }
       return {
         tag,
-        color: this.tags[tag],
+        ...this.tags[tag],
       };
     });
   }
