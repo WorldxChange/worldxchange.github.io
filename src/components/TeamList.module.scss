@@ -9,6 +9,7 @@
   .container {
     margin: 0 50px;
     margin-bottom: 60px;
+    width: 100%;
     max-width: var(--part-width);
     display: flex;
     flex-flow: column nowrap;
@@ -238,6 +239,7 @@
             gap: 8px;
             width: min-content;
             min-width: 150px;
+            flex-grow: 1;
             .name {
               font-size: 1.5em;
             }
@@ -300,6 +302,7 @@
 
             .overlayDetails {
               text-align: center;
+              flex-grow: 10;
             }
           }
         }

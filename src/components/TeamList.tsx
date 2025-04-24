@@ -45,7 +45,16 @@ export default function TeamList(props: TeamListProps) {
   const closePerson = () => setOpenIndex(null);
 
   return (
-    <motion.div className={styles.wrapper}>
+    <motion.div
+      className={styles.wrapper}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 1,
+        ease: [0.4, 0, 0.2, 1],
+      }}
+      viewport={{ once: true, amount: "some", margin: "0px 0px -20% 0px" }}
+    >
       <div className={styles.container}>
         <div className={styles.label}>
           <h3 className={styles.header}>{ColorText(header, false)}</h3>
@@ -96,9 +105,16 @@ function Person({ index, person, open, id }: PersonProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
         duration: 0.6,
-        delay: index * 0.1 + 0.2,
+        delay: index * 0.1 + 0.1,
         ease: [0.4, 0, 0.2, 1],
         y: {
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+          delay: index * 0.05 + 0.5,
+          duration: 0.2,
+        },
+        scale: {
           type: "spring",
           stiffness: 100,
           damping: 20,
@@ -106,7 +122,7 @@ function Person({ index, person, open, id }: PersonProps) {
           duration: 0.2,
         },
       }}
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.2 }}
       style={{ cursor: "pointer" }}
     >
       <motion.div
@@ -117,6 +133,13 @@ function Person({ index, person, open, id }: PersonProps) {
           x: 3,
           y: -3,
           boxShadow: "-6px 6px 0px var(--accent)",
+        }}
+        whileTap={{
+          scale: 0.95,
+          borderColor: "var(--accent)",
+          x: 0,
+          y: 0,
+          boxShadow: "0px 0px 0px var(--accent)",
         }}
         transition={{ duration: 0.2, ease: easeOut }}
       >
