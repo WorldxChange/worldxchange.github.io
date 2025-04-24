@@ -12,10 +12,13 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    @media (max-width: 750px) {
+      width: calc(100% - 2 * 20px);
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
     grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     .cardWrapper {
-      // full row height
       display: flex;
       .card {
         border: solid $border $alternate;
@@ -29,18 +32,13 @@
         }
         .cardThumbnailWrapper {
           flex: 0 1 200px;
-          clip-path: polygon(
-            20px 0%,
-            100% 0%,
-            100% calc(100% - 20px),
-            calc(100% - 20px) 100%,
-            0% 100%,
-            0% 20px
-          );
+          clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
+
           .cardThumbnail {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            object-position: top left;
           }
         }
         .cardText {
