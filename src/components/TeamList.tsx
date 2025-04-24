@@ -3,7 +3,7 @@ import styles from "./TeamList.module.scss";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { easeOut } from "motion";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { AnimateText } from "motion-plus/react";
 
 type PersonData = {
@@ -41,8 +41,10 @@ export default function TeamList(props: TeamListProps) {
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const openPerson = (index: number) => setOpenIndex(index);
   const closePerson = () => setOpenIndex(null);
+  const openPerson = (index: number | null) => {
+    setOpenIndex(index);
+  };
 
   return (
     <motion.div
@@ -101,6 +103,13 @@ function Person({ index, person, open, id }: PersonProps) {
     <motion.li
       className={styles.cardWrapper}
       onClick={() => open(index)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          open(index);
+        } else if (e.key === "Escape") {
+          open(null);
+        }
+      }}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
