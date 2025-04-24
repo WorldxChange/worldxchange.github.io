@@ -24,15 +24,8 @@ export interface FileListProps extends PageParts {
  * @param {FileListProps} props - The props for the FileList component (props.data).
  * @returns {JSX.Element} - The FileList component.
  */
-export default function ({ data: { files } }: FileListProps) {
-  if (!files || files.length === 0) {
-    return <p className={styles.fileListEmpty}>No files available.</p>;
-  }
-
-  const thumbsLoaded = Array(files.length)
-    .fill(null)
-    .map(() => useState(false));
-
+export default function FileList(props: FileListProps) {
+  const { files } = props.data;
   return (
     <motion.div
       className={styles.wrapper}
@@ -43,14 +36,7 @@ export default function ({ data: { files } }: FileListProps) {
     >
       <motion.div className={styles.container}>
         {files.map((file, index) => (
-          <FileCard
-            key={file.path}
-            file={file}
-            index={index}
-            onThumbnailLoad={() => {
-              thumbsLoaded[index][1](true);
-            }}
-          />
+          <FileCard key={file.path} file={file} index={index} />
         ))}
       </motion.div>
     </motion.div>
@@ -60,7 +46,6 @@ export default function ({ data: { files } }: FileListProps) {
 interface FileCardProps {
   file: FileItem;
   index: number;
-  onThumbnailLoad: () => void;
 }
 
 function FileCard({ file, index }: FileCardProps) {
