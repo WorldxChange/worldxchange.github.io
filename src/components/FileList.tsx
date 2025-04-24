@@ -32,7 +32,7 @@ export default function FileList(props: FileListProps) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: "some", margin: "0px 0px -20px 0px" }}
     >
       <motion.div className={styles.container}>
         {files.map((file, index) => (
