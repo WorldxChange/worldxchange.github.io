@@ -61,6 +61,7 @@ function FileCard({ file, index }: FileCardProps) {
       rel="noopener noreferrer"
       className={styles.cardWrapper}
       aria-label={`Open file: ${file.description}`}
+      animate="initial"
       whileInView={loaded ? "animate" : "initial"}
       variants={{
         initial: { opacity: 0, y: 20 },
@@ -71,7 +72,7 @@ function FileCard({ file, index }: FileCardProps) {
         delay: index * 0.08,
         ease: [0.4, 0, 0.2, 1],
       }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <motion.div
         className={styles.card}
