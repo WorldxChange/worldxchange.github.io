@@ -146,7 +146,7 @@ function Person({ index, person, open, close, id }: PersonProps) {
           boxShadow: "-6px 6px 0px var(--accent)",
         }}
         whileTap={{
-          scale: 0.95,
+          scale: 0.975,
           borderColor: "var(--accent)",
           x: 0,
           y: 0,

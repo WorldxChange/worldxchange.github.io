@@ -108,6 +108,7 @@ import { StatMediaProps } from "@/components/StatMedia";
 import { StatManyProps } from "@/components/StatMany";
 import { TeamListProps } from "@/components/TeamList";
 import { CenterHeaderProps } from "@/components/CenterHeader";
+import { FileListProps } from "@/components/FileList";
 
 export type PageParts = Readonly<{ data: object }>;
 export type PageData =
@@ -142,6 +143,10 @@ export type PageData =
   | {
       component: React.ComponentType<CenterHeaderProps>;
       data: CenterHeaderProps["data"];
+    }
+  | {
+      component: React.ComponentType<FileListProps>;
+      data: FileListProps["data"];
     }
   | {
       component: null;

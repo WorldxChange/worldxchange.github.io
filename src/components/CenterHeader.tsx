@@ -28,7 +28,16 @@ export interface CenterHeaderProps extends PageParts {
 export default function CenterHeader(props: CenterHeaderProps) {
   const { header, text } = props.data;
   return (
-    <motion.div className={styles.wrapper}>
+    <motion.div
+      className={styles.wrapper}
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.6,
+        ease: [0.4, 0, 0.2, 1],
+      }}
+      viewport={{ once: true, amount: "some", margin: "0px 0px -20% 0px" }}
+    >
       <div className={styles.container}>
         {header && (
           <h2 className={styles.header}>{ColorText(header, false)}</h2>

@@ -19,7 +19,6 @@ export default makePageStream([
       text: "Passionate about using science and technology to improve the world.",
     },
   },
-
   {
     component: TeamList,
     data: {
@@ -50,7 +49,7 @@ export default makePageStream([
           role: "Carnegie Mellon University",
           bio: "",
         },
-       /* {
+        /* {
           name: "Kha-Ai Tran",
           img: "/img/team/default.jpg",
           link: "",
@@ -98,7 +97,7 @@ export default makePageStream([
           tags: tags.get("Sc"),
           role: "Singapore University of Social Science",
           bio: "",
-        },       
+        },
         /* {
           name: "Nathalie Goodkin",
           img: "/img/team/ng.jpeg",
@@ -140,7 +139,7 @@ export default makePageStream([
           role: "ZenBusiness, Inc.",
           bio: "",
         },
-       /* {
+        /* {
           name: "Bjoern Ole Sander",
           img: "/img/team/ole.png",
           link: "",
@@ -148,7 +147,7 @@ export default makePageStream([
           role: "International Rice Research Institute",
           bio: "",
         },*/
-       /* {
+        /* {
           name: "Anton Urfels",
           img: "/img/team/anton.jpg",
           link: "",
@@ -164,7 +163,7 @@ export default makePageStream([
           role: "International Rice Research Institute",
           bio: "",
         },*/
-       /* {
+        /* {
           name: "John Lansing",
           img: "/img/team/jc.jpg",
           link: "",
@@ -180,7 +179,7 @@ export default makePageStream([
           role: "Santa Fe Institute",
           bio: "",
         },
-       /* {
+        /* {
           name: "Gabrielle B. Dreyfus",
           img: "/img/team/gabrielle.jpg",
           link: "",
@@ -229,7 +228,7 @@ export default makePageStream([
           role: "Pittsburgh, PA USA",
           bio: "",
         },
-       /* {
+        /* {
           name: "Max Plank Institute",
           img: "/img/team/mp.png",
           link: "",
@@ -237,7 +236,7 @@ export default makePageStream([
           role: "",
           bio: "",
         },*/
-       /* {
+        /* {
           name: "Complexity Science Hub",
           img: "/img/team/csh.png",
           link: "",
