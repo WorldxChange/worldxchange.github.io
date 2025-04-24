@@ -3,7 +3,7 @@ import styles from "./TeamList.module.scss";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { easeOut } from "motion";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { AnimateText } from "motion-plus/react";
 
 type PersonData = {
@@ -70,6 +70,7 @@ export default function TeamList(props: TeamListProps) {
               index={index}
               person={person}
               open={openPerson}
+              close={closePerson}
             />
           ))}
         </motion.ul>
@@ -94,9 +95,10 @@ interface PersonProps {
   id: string;
   person: PersonData;
   open: (index: number) => void;
+  close: () => void;
 }
 
-function Person({ index, person, open, id }: PersonProps) {
+function Person({ index, person, open, close, id }: PersonProps) {
   const { name, img, tags } = person;
 
   return (
@@ -107,7 +109,7 @@ function Person({ index, person, open, id }: PersonProps) {
         if (e.key === "Enter") {
           open(index);
         } else if (e.key === "Escape") {
-          open(null);
+          close();
         }
       }}
       initial={{ opacity: 0, y: 20 }}
