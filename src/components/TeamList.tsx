@@ -3,7 +3,7 @@ import styles from "./TeamList.module.scss";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { easeOut } from "motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimateText } from "motion-plus/react";
 
 type PersonData = {
@@ -100,6 +100,13 @@ interface PersonProps {
 
 function Person({ index, person, open, close, id }: PersonProps) {
   const { name, img, tags } = person;
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 5000);
+    return () => clearTimeout(timer);
+  });
 
   return (
     <motion.li
@@ -113,7 +120,7 @@ function Person({ index, person, open, close, id }: PersonProps) {
         }
       }}
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      whileInView={loaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{
         duration: 0.6,
         delay: index * 0.1 + 0.1,
@@ -161,11 +168,13 @@ function Person({ index, person, open, close, id }: PersonProps) {
           <motion.div layoutId={`person-image-${id}`}>
             <Image
               className={styles.image}
+              onLoad={() => setLoaded(true)}
               src={img}
               alt={`${name} profile picture`}
               width={200}
               height={200}
-              priority={index < 3}
+              priority={false}
+              loading="lazy"
             />
           </motion.div>
         </motion.div>

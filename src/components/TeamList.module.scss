@@ -130,6 +130,7 @@
         0% 100%,
         0% 20px
       );
+      background: $alternate;
       object-fit: cover;
       display: block;
     }
@@ -210,6 +211,7 @@
         }
         @media (max-width: 750px) {
           width: auto;
+          max-width: 400px;
         }
         height: auto;
         max-height: min(600px, 60vh);

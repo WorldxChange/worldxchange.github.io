@@ -60,7 +60,7 @@ export default makePageStream([
         },*/
         {
           name: "Sander Vonk",
-          img: "/img/team/sander.png",
+          img: "/img/team/sander.jpg",
           link: "//svonk.me",
           tags: tags.get("En", "Ar"),
           role: "The World x Change site was *designed, developed, and built by Sander* in Next.js with motion.dev for interactions.",
