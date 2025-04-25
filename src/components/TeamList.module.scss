@@ -67,6 +67,7 @@
         // TODO: ensure reasonable display without forcing equal size;
         // max-width: calc(200px + 15px * 2 + $border * 2);
         list-style-type: none;
+        user-select: none;
         @media (max-width: 750px) {
           max-width: 400px;
         }
