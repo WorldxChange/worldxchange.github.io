@@ -208,7 +208,7 @@
           width: auto;
         }
         height: auto;
-        max-height: min(600px, 70vh);
+        max-height: min(600px, 60vh);
         overflow-y: auto;
         display: block;
         z-index: 100;
@@ -243,7 +243,6 @@
           }
 
           .titleContainer {
-            position: sticky;
             top: 0;
             display: flex;
             flex-direction: column;
