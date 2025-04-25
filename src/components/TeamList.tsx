@@ -255,35 +255,37 @@ function PersonOverlay({ person, close, id }: PersonOverlayProps) {
                   ))}
                 </div>
               </motion.div>
-              <motion.div
-                className={styles.overlayDetails}
-                initial={{ opacity: 0, y: 40, originY: 0, scaleY: 0.9 }}
-                animate={{ opacity: 1, y: 0, originY: 0, scaleY: 1 }}
-                transition={{ delay: 0.15, duration: 0.3, ease: easeOut }}
-              >
-                {role && (
-                  <p
-                    className={styles.role}
-                    style={{
-                      textAlign:
-                        role.length > centerMaxLength ? "left" : "center",
-                    }}
-                  >
-                    {ColorText(role, true, true)}
-                  </p>
-                )}
-                {bio && (
-                  <p
-                    className={styles.bio}
-                    style={{
-                      textAlign:
-                        bio.length > centerMaxLength ? "left" : "center",
-                    }}
-                  >
-                    {ColorText(bio, true, true)}
-                  </p>
-                )}
-              </motion.div>
+              {(role || bio) && (
+                <motion.div
+                  className={styles.overlayDetails}
+                  initial={{ opacity: 0, y: 40, originY: 0, scaleY: 0.9 }}
+                  animate={{ opacity: 1, y: 0, originY: 0, scaleY: 1 }}
+                  transition={{ delay: 0.15, duration: 0.3, ease: easeOut }}
+                >
+                  {role && (
+                    <p
+                      className={styles.role}
+                      style={{
+                        textAlign:
+                          role.length > centerMaxLength ? "left" : "center",
+                      }}
+                    >
+                      {ColorText(role, true, true)}
+                    </p>
+                  )}
+                  {bio && (
+                    <p
+                      className={styles.bio}
+                      style={{
+                        textAlign:
+                          bio.length > centerMaxLength ? "left" : "center",
+                      }}
+                    >
+                      {ColorText(bio, true, true)}
+                    </p>
+                  )}
+                </motion.div>
+              )}
             </div>
           </motion.div>
         </div>

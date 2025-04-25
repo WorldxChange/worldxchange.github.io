@@ -204,6 +204,10 @@
           padding: 20px;
         }
         width: 100%;
+
+        &:not(:has(.overlayDetails)) {
+          width: auto;
+        }
         @media (max-width: 750px) {
           width: auto;
         }
