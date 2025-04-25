@@ -257,8 +257,8 @@ function PersonOverlay({ person, close, id }: PersonOverlayProps) {
               </motion.div>
               <motion.div
                 className={styles.overlayDetails}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 40, originY: 0, scaleY: 0.9 }}
+                animate={{ opacity: 1, y: 0, originY: 0, scaleY: 1 }}
                 transition={{ delay: 0.15, duration: 0.3, ease: easeOut }}
               >
                 {role && (
