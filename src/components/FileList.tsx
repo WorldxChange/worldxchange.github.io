@@ -9,6 +9,7 @@ interface FileItem {
   path: string;
   title: string;
   description: string;
+  type?: string;
 }
 
 export interface FileListProps extends PageParts {
@@ -49,15 +50,16 @@ interface FileCardProps {
 }
 
 function FileCard({ file, index }: FileCardProps) {
-  const pdfPath = `${file.path}.pdf`;
-  const thumbnailPath = `${file.path}.jpg`;
+  const ext: string = file.type || "pdf";
+  const filePath = `${file.path}.${ext}`;
+  const thumbnailPath = `${file.path}.${"jpg"}`;
   const [loaded, setLoaded] = useState(false);
 
   return (
     <motion.a
-      href={pdfPath}
+      href={filePath}
       target="_blank"
-      download={`${file.title}.pdf`}
+      download={`${file.title}.${ext}`}
       rel="noopener noreferrer"
       className={styles.cardWrapper}
       aria-label={`Open file: ${file.description}`}
@@ -105,6 +107,10 @@ function FileCard({ file, index }: FileCardProps) {
             onLoad={() => setLoaded(true)}
             alt={`Thumbnail for "${file.title}"`}
             className={styles.cardThumbnail}
+            style={{
+              objectPosition: ext !== "pdf" ? "top center" : "top left",
+              objectFit: ext !== "pdf" ? "cover" : "contain",
+            }}
             width={200}
             height={260}
           />
