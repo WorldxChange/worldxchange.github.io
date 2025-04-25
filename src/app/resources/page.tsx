@@ -18,6 +18,13 @@ export default makePageStream([
     data: {
       files: [
         {
+          path: "files/video",
+          title: "WxC Informational Video",
+          description:
+            "A short video introducing the WxC project and its goals, focusing on the Bali pilot project and its potential for global impact. The video highlights the project's innovative approach to addressing climate change and its implications for sustainable agriculture.",
+          type: "mp4",
+        },
+        {
           path: "/files/BaliCC",
           title: "Carbon Emissions from Balinese Rice Paddies",
           description:
