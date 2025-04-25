@@ -206,6 +206,8 @@ interface PersonOverlayProps {
 
 function PersonOverlay({ person, close, id }: PersonOverlayProps) {
   const { name, img, tags, role, bio } = person;
+  // the maximum amount of characters before text left (instead of center)-aligns
+  const centerMaxLength = 50;
 
   return (
     <>
@@ -221,6 +223,7 @@ function PersonOverlay({ person, close, id }: PersonOverlayProps) {
       <div className={styles.overlayContainer} onClick={close}>
         <div className={styles.overlayCardWrapper}>
           <motion.div
+            data-lenis-prevent
             className={styles.overlayCard}
             layoutId={`person-card-${id}`}
             onClick={(e) => e.stopPropagation()}
@@ -259,10 +262,26 @@ function PersonOverlay({ person, close, id }: PersonOverlayProps) {
                 transition={{ delay: 0.15, duration: 0.3, ease: easeOut }}
               >
                 {role && (
-                  <p className={styles.role}>{ColorText(role, true, true)}</p>
+                  <p
+                    className={styles.role}
+                    style={{
+                      textAlign:
+                        role.length > centerMaxLength ? "left" : "center",
+                    }}
+                  >
+                    {ColorText(role, true, true)}
+                  </p>
                 )}
                 {bio && (
-                  <p className={styles.bio}>{ColorText(bio, true, true)}</p>
+                  <p
+                    className={styles.bio}
+                    style={{
+                      textAlign:
+                        bio.length > centerMaxLength ? "left" : "center",
+                    }}
+                  >
+                    {ColorText(bio, true, true)}
+                  </p>
                 )}
               </motion.div>
             </div>
