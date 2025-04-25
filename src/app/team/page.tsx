@@ -6,8 +6,9 @@ const tags = new TagCollection(
   ["Sc", "#02c43a", "Science"],
   ["En", "#DD6B3A", "Engineering"],
   ["St", "#04C8CB", "Strategy"],
-  ["Ag", "#A4F687", "Agriculture"],
+  ["Ag", "#A4F687", "Agriculture / Ecology"],
   ["Ar", "#84DCCF", "Art / Design"],
+  ["Ec", "#B87333", "Economics / Finance"],
   ["Ka", "#FFD700", "Karma..."]
 );
 
@@ -37,7 +38,7 @@ export default makePageStream([
           name: "John H. Miller",
           img: "/img/team/john.jpg",
           link: "//www.jhmsfi.com",
-          tags: tags.get("Sc", "En", "St", "Ar"),
+          tags: tags.get("Sc", "En", "St", "Ec"),
           role: "Carnegie Mellon University and the Santa Fe Institute",
           bio: "",
         },

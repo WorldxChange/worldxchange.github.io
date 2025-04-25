@@ -125,7 +125,14 @@ export default makePageStream([
             number: 0.5,
             after: " tCO2e",
           },
-          text: "are released by *flying economy class 2,500 miles (4,000 kilometers),* such as a one-way flight from NYC to LA.",
+          text: "are released per passenger by *flying economy class 2,500 miles (4,000 kilometers),* such as a one-way flight from NYC to LA.",
+        },
+        {
+          stat: {
+            number: 30,
+            after: " tCO2e",
+          },
+          text: "are released by *flying a midsized corporate jet 2,500 miles (4,000 kilometers).* ",
         },
         {
           stat: {
