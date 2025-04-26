@@ -64,7 +64,7 @@ export default makePageStream([
           link: "//svonk.me",
           tags: tags.get("En", "Ar"),
           role: "The World x Change site was *designed, developed, and built by Sander* in Next.js with motion.dev for interactions.",
-          bio: "Sander is a Carnegie Mellon University (class of 2028)  major with a *passion for education and applied technology*. He independenly creates web-based apps aimed at providing equal opportunity for students worldwide, teaching him technical skills such a proficiency in over ten coding languages, and deep familiarity with UX/UI and Figma. You can find more of his work at <a href='https://svonk.me' target='_blank' rel='noopener noreferrer'>**svonk.me**</a>.",
+          bio: "Sander is a Carnegie Mellon University (class of 2028) Information Systems & Human Computer Interaction major with a *passion for education and applied technology*. He independenly creates web-based apps aimed at providing equal opportunity for students worldwide, teaching him technical skills such a proficiency in over ten coding languages, and deep familiarity with UX/UI and Figma. You can find more of his work at <a href='https://svonk.me' target='_blank' rel='noopener noreferrer'>**svonk.me**</a>.",
         },
         {
           name: "Jeff Kersey",
