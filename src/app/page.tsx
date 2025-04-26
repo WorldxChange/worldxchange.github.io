@@ -156,7 +156,7 @@ export default makePageStream([
             number: 70 / 100,
             format: { style: "percent" },
           },
-          text: "of the *methane emissions from Balinese rice fields can be eliminated* by not flooding the paddies.  AWD also *reduces the runoff of fertilizer* that damages Bali's coral reefs.",
+          text: "of the *methane emissions from Balinese rice fields* **can be eliminated** by not flooding the paddies.  AWD also *reduces the runoff of fertilizer* that damages Bali's coral reefs.",
         },
       ],
       media: {
