@@ -140,11 +140,11 @@ export default makePageStream([
             number: 10 / 100,
             format: { style: "percent" },
           },
-          text: "*of anthropogenic global methane emissions come from rice farming.*",
+          text: "of anthropogenic *global methane emissions come from rice farming.*",
         },
         {
           stat: {
-            first: "Methane has",
+            first: "*Methane has*",
             number: 28,
             after: "x",
           },
