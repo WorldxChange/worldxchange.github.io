@@ -12,7 +12,13 @@
     gap: $border !important;
     .stat {
       max-width: unset !important;
-      flex: 1 0 200px;
+      flex: 1 0 350px !important;
+      @media (max-width: 1000px), (max-height: 600px) {
+        flex-basis: 300px !important;
+      }
+      @media (max-width: 750px), (max-height: 350px) {
+        flex-basis: 200px !important;
+      }
       width: min(max(250px, 15vw), 400px) !important;
       height: unset !important;
       display: flex;
