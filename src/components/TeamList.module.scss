@@ -84,6 +84,7 @@
 
           .imageWrapper {
             margin-bottom: 5px;
+            user-select: none;
           }
 
           .titleContainer {
@@ -117,6 +118,7 @@
     max-width: 200px;
     width: 100%;
     aspect-ratio: 1 / 1;
+    user-select: none;
     * {
       height: 100%;
       width: 100%;
@@ -342,4 +344,5 @@
   font-size: 0.75em;
   white-space: nowrap;
   border: solid $border $alternate;
+  user-select: none;
 }
