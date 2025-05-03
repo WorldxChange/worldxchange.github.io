@@ -129,18 +129,19 @@
       }
       img,
       video {
-        flex: 0 0 auto;
-        height: auto;
-
-        @media (min-width: 610px) and (max-width: $break-width) {
-          flex: 1 1 100px;
-          height: unset;
-        }
         width: 100%;
         max-width: 100%;
         min-width: unset;
         max-height: 70vh;
         object-fit: contain;
+
+        flex: 0 0 auto;
+        height: auto;
+        @media (min-width: 610px) and (max-width: $break-width) {
+          flex: 1 1 100px;
+          height: unset;
+        }
+
         &video {
           height: auto;
           flex: 0 0 auto;

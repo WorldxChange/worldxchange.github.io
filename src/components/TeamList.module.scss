@@ -8,15 +8,16 @@
   flex-direction: column;
   align-items: stretch;
   .container {
-    margin: 0 50px;
-    @media (max-width: 750px) {
-      margin: 0 20px;
-    }
     margin-bottom: 60px;
     align-self: center;
     max-width: var(--part-width);
     display: flex;
     flex-flow: column nowrap;
+
+    margin: 0 50px;
+    @media (max-width: 750px) {
+      margin: 0 20px;
+    }
     .label {
       text-align: center;
       margin: 0 auto 15px;
@@ -202,42 +203,42 @@
         scrollbar-width: none;
         border: solid variables.$border variables.$accent;
         background-color: variables.$background;
-        padding: 25px;
         position: relative;
-        @media (max-width: 750px) {
-          padding: 20px;
-        }
-        width: 100%;
-
-        &:not(:has(.overlayDetails)) {
-          width: auto;
-        }
-        @media (max-width: 750px) {
-          width: auto;
-          max-width: 400px;
-        }
         height: auto;
         max-height: min(600px, 60vh);
         overflow-y: auto;
         display: block;
         z-index: 100;
+
+        padding: 25px;
+        width: 100%;
+        @media (max-width: 750px) {
+          padding: 20px;
+          width: auto;
+          max-width: 400px;
+        }
+
+        &:not(:has(.overlayDetails)) {
+          width: auto;
+        }
         .overlayCardContents {
           display: flex;
           flex-flow: row wrap;
           justify-content: flex-start;
-          align-items: start;
+          align-items: flex-start;
           gap: 25px;
           width: 100%;
           height: auto;
-          > * {
-            flex-grow: 1;
-          }
 
+          -ms-overflow-style: none;
+          scrollbar-width: none;
           &::-webkit-scrollbar {
             display: none;
           }
-          -ms-overflow-style: none;
-          scrollbar-width: none;
+
+          > * {
+            flex-grow: 1;
+          }
 
           .imageWrapper {
             flex-shrink: 0;

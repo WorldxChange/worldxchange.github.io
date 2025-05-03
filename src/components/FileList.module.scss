@@ -11,13 +11,13 @@
     max-width: var(--part-width);
 
     display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     @media (max-width: 750px) {
       width: calc(100% - 2 * 20px);
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
     .cardWrapper {
       display: flex;
       user-select: none;

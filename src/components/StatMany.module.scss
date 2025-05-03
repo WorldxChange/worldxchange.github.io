@@ -10,8 +10,17 @@
     display: flex;
     flex-flow: row wrap !important;
     gap: variables.$border !important;
+    background-color: variables.$alternate;
     .stat {
+      width: min(max(250px, 15vw), 400px) !important;
+      height: unset !important;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
       max-width: unset !important;
+      background-color: variables.$background;
+      padding: 50px 20px;
+
       flex: 1 0 350px !important;
       @media (max-width: 1000px), (max-height: 600px) {
         flex-basis: 300px !important;
@@ -19,29 +28,14 @@
       @media (max-width: 750px), (max-height: 350px) {
         flex-basis: 200px !important;
       }
-      width: min(max(250px, 15vw), 400px) !important;
-      height: unset !important;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
       .statNumber {
         width: 100%;
         max-width: 340px;
       }
       .statText {
         max-width: 340px;
-        margin-right: auto;
+        width: 100%;
       }
-    }
-    padding: 0;
-    gap: variables.$border;
-    background-color: variables.$alternate;
-    flex-flow: row nowrap;
-    .stat {
-      background-color: variables.$background;
-      flex: 1 0 200px;
-      padding: 50px 20px;
-      height: 100%;
       .statFirst {
         margin-top: -1em !important;
       }
