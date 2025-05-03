@@ -28,7 +28,7 @@ export default makePageStream([
       people: [
         {
           name: "J. Stephen Lansing",
-          img: "/img/team/steve.jpeg",
+          img: "/img/team/steve.webp",
           link: "",
           tags: tags.get("Sc", "En", "St", "Ag"),
           role: "Santa Fe Institute, Complexity Science Hub, and Somya Pertiwi",
@@ -44,7 +44,7 @@ export default makePageStream([
         },
         {
           name: "Emily Zuetell",
-          img: "/img/team/emily.jpeg",
+          img: "/img/team/emily.webp",
           link: "",
           tags: tags.get("Sc", "En"),
           role: "Carnegie Mellon University",
@@ -93,7 +93,7 @@ export default makePageStream([
         },
         {
           name: "Ning Ning Chung",
-          img: "/img/team/ningning.jpeg",
+          img: "/img/team/ningning.webp",
           link: "",
           tags: tags.get("Sc"),
           role: "Singapore University of Social Science",
@@ -101,7 +101,7 @@ export default makePageStream([
         },
         /* {
           name: "Nathalie Goodkin",
-          img: "/img/team/ng.jpeg",
+          img: "/img/team/ng.webp",
           link: "",
           tags: tags.get("Sc"),
           role: "American Museum of Natural History",
@@ -109,7 +109,7 @@ export default makePageStream([
         },*/
         /* {
           name: "Jani Tanzil",
-          img: "/img/team/jt.jpeg",
+          img: "/img/team/jt.webp",
           link: "",
           tags: tags.get("Sc"),
           role: "St. John's Island National Marine Laboratory",
@@ -117,7 +117,7 @@ export default makePageStream([
         },*/
         /* {
           name: "Renée Smits",
-          img: "/img/team/rs.jpeg",
+          img: "/img/team/rs.webp",
           link: "",
           tags: tags.get("St"),
           role: "Rabobank, Restore the Legacy",
@@ -174,7 +174,7 @@ export default makePageStream([
         },*/
         {
           name: "Chris Kempes",
-          img: "/img/team/chris.jpeg",
+          img: "/img/team/chris.webp",
           link: "",
           tags: tags.get("Sc"),
           role: "Santa Fe Institute",
@@ -190,7 +190,7 @@ export default makePageStream([
         },*/
         {
           name: "Hayden Bernhardt",
-          img: "/img/team/hayden.jpeg",
+          img: "/img/team/hayden.webp",
           link: "",
           tags: tags.get("Ar"),
           role: "Harvard University",

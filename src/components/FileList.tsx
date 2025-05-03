@@ -52,7 +52,7 @@ interface FileCardProps {
 function FileCard({ file, index }: FileCardProps) {
   const ext: string = file.type || "pdf";
   const filePath = `${file.path}.${ext}`;
-  const thumbnailPath = `${file.path}.${"jpg"}`;
+  const thumbnailPath = `${file.path}.${"webp"}`;
   const [loaded, setLoaded] = useState(false);
 
   return (
