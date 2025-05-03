@@ -6,11 +6,13 @@ import { easeOut } from "motion";
 import { useEffect, useState } from "react";
 import { AnimateText } from "motion-plus/react";
 
+const DEFAULT_IMG = "/img/team/default.webp";
+
 type PersonData = {
   /** The person's name */
   name: string;
   /** Profile picture image path */
-  img: string;
+  img?: string;
   /** Outlink for the person */
   link?: string;
   /** Tag objects to show on their profile */
@@ -99,7 +101,7 @@ interface PersonProps {
 }
 
 function Person({ index, person, open, close, id }: PersonProps) {
-  const { name, img, tags } = person;
+  const { name, img = DEFAULT_IMG, tags } = person;
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -214,7 +216,7 @@ interface PersonOverlayProps {
 }
 
 function PersonOverlay({ person, close, id }: PersonOverlayProps) {
-  const { name, img, tags, role, bio } = person;
+  const { name, img = DEFAULT_IMG, tags, role, bio } = person;
   // the maximum amount of characters before text left (instead of center)-aligns
   const centerMaxLength = 50;
 
