@@ -16,14 +16,15 @@ const inter = Inter({
   variable: "--font",
 });
 
+const baseUrl = "https://w-x-c.com";
 export const metadata: Metadata = {
   title: "World x Change",
-  metadataBase: new URL("https://w-x-c.com"),
+  metadataBase: new URL(baseUrl),
   description: "An Information-Age Solution to the Tragedy of the Commons",
   openGraph: {
     title: "World x Change",
     description: "An Information-Age Solution to the Tragedy of the Commons",
-    url: "https://w-x-c.com",
+    url: baseUrl,
     siteName: "World x Change",
     images: [
       {
@@ -81,4 +82,25 @@ export default function RootLayout({
       <GoogleAnalytics gaId="G-R3W7N6X2MC" />
     </html>
   );
+}
+
+export function makePageMetadata(options: {
+  title: string;
+  description: string;
+  url: string;
+}): Metadata {
+  const { title, description, url } = options;
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: baseUrl + url,
+    },
+    twitter: {
+      title,
+      description,
+    },
+  };
 }
