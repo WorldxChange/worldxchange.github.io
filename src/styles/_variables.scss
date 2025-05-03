@@ -1,3 +1,4 @@
+@use "sass:color";
 $header-height: 50px;
 $header-width: 800px;
 $header-spacing: -$header-height;
@@ -9,7 +10,7 @@ $background: #000000;
 $foreground: #ffffff;
 $alternate: #6e6e73;
 $white: #ffffff;
-$grey: transparentize($white, 0.55); // #aaaaaacb
+$grey: color.adjust($white, $alpha: -0.55); // #aaaaaacb
 $accent: #03ff40;
 $button: #226726;
 $button-color: $white;
@@ -19,6 +20,6 @@ $highlight: #226726;
 // $footer-text: #000000bb;
 // $footer-link: #0066cc;
 
-$footer: lighten($background, 15);
+$footer: color.adjust($background, $lightness: 15%);
 $footer-text: $foreground;
 $footer-link: #3586d7;
