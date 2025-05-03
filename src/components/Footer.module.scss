@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "@/styles/variables.scss";
 
 .container {
@@ -11,7 +12,7 @@
   justify-content: space-between;
   padding: 20px 60px;
   .alt {
-    color: transparentize($footer-text, 0.3);
+    color: color.adjust($footer-text, $alpha: -0.5);
   }
   .links {
     display: inline-flex;
@@ -25,13 +26,13 @@
       height: 1em;
       width: $border;
       border-radius: $border;
-      background-color: transparentize($footer-text, 0.3);
+      background-color: color.adjust($footer-text, $alpha: -0.3);
       align-self: center;
       margin: 0 10px;
     }
   }
   ::selection {
-    background: transparentize($highlight, 0.8);
+    background: color.adjust($highlight, $alpha: -0.8);
     color: $highlight;
   }
 

@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "@/styles/variables.scss";
 
 .container {
@@ -31,7 +32,7 @@
         li {
           list-style-type: none;
           opacity: 0.6;
-          border-bottom: $border solid transparentize($white, 1);
+          border-bottom: $border solid color.adjust($white, $alpha: -1);
           a {
             display: inline-block;
             line-height: calc($header-height - 1px);

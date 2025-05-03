@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "@/styles/variables.scss";
 .container {
   max-width: var(--part-width);
@@ -66,7 +67,7 @@
         font-weight: 600;
         max-width: max(25%, 300px);
         margin-top: 150px;
-        text-shadow: 0px 0px 7px transparentize($background, 0.33);
+        text-shadow: 0px 0px 7px color.adjust($background, $alpha: -0.33);
         @media (max-width: 750px) {
           font-size: 15px;
           line-height: 1.5;
