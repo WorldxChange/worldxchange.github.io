@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     siteName: "World x Change",
     images: [
       {
-        url: "/img/og-image.png",
+        url: "/img/og-image.webp",
         width: 1200,
         height: 630,
         alt: "World x Change",
-        type: "image/png",
+        type: "image/webp",
       },
     ],
     locale: "en_US",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "World x Change",
     description: "An Information-Age Solution to the Tragedy of the Commons",
-    images: ["/img/og-image.png"],
+    images: ["/img/og-image.webp"],
   },
   icons: {
     icon: "/favicon.ico",

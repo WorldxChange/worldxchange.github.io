@@ -1,7 +1,7 @@
 import { makePageMetadata } from "../layout";
 
 export const metadata = makePageMetadata({
-  title: "World x Change | Contact",
+  title: "WxC | Contact",
   description: "Contact us for more information",
   url: "/contact",
 });

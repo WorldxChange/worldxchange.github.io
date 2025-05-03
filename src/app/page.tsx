@@ -32,7 +32,7 @@ export default makePageStream([
     data: {
       images: [
         {
-          src: "/img/center/flowchart.png",
+          src: "/img/center/flowchart.webp",
           alt: "Flowchart",
           blurbs: [
             "Frontier science creates a *bottom-up solution* to the Tragedy of the Commons.",
@@ -42,7 +42,7 @@ export default makePageStream([
           ],
         },
         {
-          src: "/img/center/cylinder.png",
+          src: "/img/center/cylinder.webp",
           alt: "Methane Measurement",
           blurbs: [
             "*World-class measurements* of environmental impacts.",
@@ -50,14 +50,14 @@ export default makePageStream([
           ],
         },
         {
-          src: "/img/center/remote-sensing-before.png",
+          src: "/img/center/remote-sensing-before.webp",
           alt: "Sensing Before",
           blurbs: [
             "Remote sensing provides the needed *monitoring, verification, and reporting (MVR)* of successful stewardship.",
           ],
         },
         {
-          src: "/img/center/remote-sensing-after.png",
+          src: "/img/center/remote-sensing-after.webp",
           alt: "Sensing After",
           blurbs: [
             "Generating high-quality *results that can be trusted* by patrons and markets.",
@@ -162,7 +162,7 @@ export default makePageStream([
       media: {
         type: "video",
         src: "/media/video.mp4",
-        placeholder: "/media/video-placeholder.png",
+        placeholder: "/media/video-placeholder.webp",
         alt: "Video discussing the results from our demonstration project on Bali.",
         caption: "Results from our earlier demonstration project on Bali",
       },
@@ -173,7 +173,7 @@ export default makePageStream([
     data: {
       images: [
         {
-          src: "/img/center/field-measurement.png",
+          src: "/img/center/field-measurement.webp",
           alt: "Piccarro",
           blurbs: [
             "*In-field gas analyzers* track emissions over time from different irrigation practices.",
@@ -181,7 +181,7 @@ export default makePageStream([
           ],
         },
         {
-          src: "/img/center/subak-bena.png",
+          src: "/img/center/subak-bena.webp",
           alt: "Subak Bena",
           blurbs: [
             "Our approach integrates a *deep understanding* of the local people, culture, and institutions.",
@@ -189,7 +189,7 @@ export default makePageStream([
           ],
         },
         {
-          src: "/img/center/somya-pertiwi.png",
+          src: "/img/center/somya-pertiwi.webp",
           alt: "Somya Pertiwi",
           blurbs: [
             "The Balinese NGO *Somya Pertiwi (Kindness of the Earth Goddess)* leads the project.",
@@ -228,7 +228,7 @@ export default makePageStream([
       ],
       media: {
         type: "img",
-        src: "/img/plaque.png",
+        src: "/img/plaque.webp",
         alt: "Project plaque",
         caption: "Each particpating subak will display our project plaque.",
       },
@@ -282,7 +282,7 @@ export default makePageStream([
       ],
       media: {
         type: "img",
-        src: "/img/flooded-v-not.jpeg",
+        src: "/img/flooded-v-not.webp",
         alt: "Time- and GPS-tagged photo of AWD vs Flooded rice paddies.",
         caption:
           "Time- and GPS-tagged photos are used to ground truth our remote sensing of AWD (left) and Flooded (right) rice fields.",

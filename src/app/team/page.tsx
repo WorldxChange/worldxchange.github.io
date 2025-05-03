@@ -36,7 +36,7 @@ export default makePageStream([
         },
         {
           name: "John H. Miller",
-          img: "/img/team/john.jpg",
+          img: "/img/team/john.webp",
           link: "//www.jhmsfi.com",
           tags: tags.get("Sc", "En", "St", "Ec"),
           role: "Carnegie Mellon University and the Santa Fe Institute",
@@ -52,7 +52,7 @@ export default makePageStream([
         },
         /* {
           name: "Kha-Ai Tran",
-          img: "/img/team/default.jpg",
+          img: "/img/team/default.webp",
           link: "",
           tags: tags.get("Sc", "En"),
           role: "",
@@ -60,7 +60,7 @@ export default makePageStream([
         },*/
         {
           name: "Sander Vonk",
-          img: "/img/team/sander.jpg",
+          img: "/img/team/sander.webp",
           link: "//svonk.me",
           tags: tags.get("En", "Ar"),
           role: "The World x Change site was *designed, developed, and built by Sander* in Next.js with motion.dev for interactions.",
@@ -68,7 +68,7 @@ export default makePageStream([
         },
         {
           name: "Jeff Kersey",
-          img: "/img/team/jeff.jpg",
+          img: "/img/team/jeff.webp",
           link: "",
           tags: tags.get("St"),
           role: "Jacobs, EXPO 2020 Dubai",
@@ -85,7 +85,7 @@ export default makePageStream([
       people: [
         {
           name: "Wayan Alit Arthawigina",
-          img: "/img/team/alit.jpg",
+          img: "/img/team/alit.webp",
           link: "",
           tags: tags.get("Sc", "En", "St", "Ag"),
           role: "Somya Pertiwi",
@@ -134,7 +134,7 @@ export default makePageStream([
       people: [
         {
           name: "Ross Buhrdorf",
-          img: "/img/team/ross.png",
+          img: "/img/team/ross.webp",
           link: "",
           tags: tags.get("St"),
           role: "ZenBusiness, Inc.",
@@ -142,7 +142,7 @@ export default makePageStream([
         },
         /* {
           name: "Bjoern Ole Sander",
-          img: "/img/team/ole.png",
+          img: "/img/team/ole.webp",
           link: "",
           tags: tags.get("Sc", "Ag"),
           role: "International Rice Research Institute",
@@ -150,7 +150,7 @@ export default makePageStream([
         },*/
         /* {
           name: "Anton Urfels",
-          img: "/img/team/anton.jpg",
+          img: "/img/team/anton.webp",
           link: "",
           tags: tags.get("Sc", "Ag"),
           role: "CGIAR",
@@ -158,7 +158,7 @@ export default makePageStream([
         },*/
         /*{
           name: "Kazuki Saito",
-          img: "/img/team/kazuki.png",
+          img: "/img/team/kazuki.webp",
           link: "",
           tags: tags.get("Sc", "Ag"),
           role: "International Rice Research Institute",
@@ -166,7 +166,7 @@ export default makePageStream([
         },*/
         /* {
           name: "John Lansing",
-          img: "/img/team/jc.jpg",
+          img: "/img/team/jc.webp",
           link: "",
           tags: tags.get("St"),
           role: "Hahn and Hahn LLP",
@@ -182,7 +182,7 @@ export default makePageStream([
         },
         /* {
           name: "Gabrielle B. Dreyfus",
-          img: "/img/team/gabrielle.jpg",
+          img: "/img/team/gabrielle.webp",
           link: "",
           tags: tags.get("Sc"),
           role: "Institute for Governance and Sustainable Development",
@@ -198,7 +198,7 @@ export default makePageStream([
         },
         {
           name: "Vibeke Sorensen",
-          img: "/img/team/vibeke.jpg",
+          img: "/img/team/vibeke.webp",
           link: "",
           tags: tags.get("En", "St", "Ar"),
           role: "",
@@ -215,7 +215,7 @@ export default makePageStream([
       people: [
         {
           name: "Santa Fe Institute",
-          img: "/img/team/sfi.png",
+          img: "/img/team/sfi.webp",
           link: "",
           tags: tags.get("Sc"),
           role: "Santa Fe, NM USA",
@@ -223,7 +223,7 @@ export default makePageStream([
         },
         {
           name: "Carnegie Mellon University",
-          img: "/img/team/cmu.png",
+          img: "/img/team/cmu.webp",
           link: "",
           tags: tags.get("Sc"),
           role: "Pittsburgh, PA USA",
@@ -231,7 +231,7 @@ export default makePageStream([
         },
         /* {
           name: "Max Plank Institute",
-          img: "/img/team/mp.png",
+          img: "/img/team/mp.webp",
           link: "",
           tags: tags.get("Sc"),
           role: "",
@@ -239,7 +239,7 @@ export default makePageStream([
         },*/
         /* {
           name: "Complexity Science Hub",
-          img: "/img/team/csh.png",
+          img: "/img/team/csh.webp",
           link: "",
           tags: tags.get("Sc"),
           role: "",

@@ -1,7 +1,7 @@
 import { makePageMetadata } from "../layout";
 
 export const metadata = makePageMetadata({
-  title: "World x Change | Resources",
+  title: "WxC | Resources",
   description: "Downloadable media and supporting documents",
   url: "/resources",
 });
