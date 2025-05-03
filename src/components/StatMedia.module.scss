@@ -1,10 +1,9 @@
-@import "@/styles/variables.scss";
+@use "@/styles/variables";
 
 .wrapper {
   $media-base: 500px;
   $stats-base: 400px;
-  $break-width: calc($border + $stats-base + $media-base);
-
+  $break-width: calc(variables.$border + $stats-base + $media-base);
   position: relative;
   z-index: -1;
   display: flex;
@@ -36,11 +35,11 @@
     flex-flow: row wrap;
     align-items: stretch;
     width: 100%;
-    background: $alternate;
-    gap: $border;
-    padding: $border 0;
+    background: variables.$alternate;
+    gap: variables.$border;
+    padding: variables.$border 0;
     > * {
-      background: $background;
+      background: variables.$background;
     }
     .stats {
       flex: 2 1 $stats-base;
@@ -58,7 +57,7 @@
         .statNumber {
           user-select: none;
           .number {
-            color: $accent;
+            color: variables.$accent;
             font-size: 70px;
             --decor-size: 52px;
             @media (max-width: 1000px), (max-height: 600px) {
@@ -74,7 +73,7 @@
         .statText,
         .statFirst {
           &.statFirst {
-            color: $grey;
+            color: variables.$grey;
             margin-top: 10px;
             margin-bottom: -3px;
           }
@@ -91,11 +90,11 @@
       }
       @media (min-width: 610px) and (max-width: $break-width) {
         padding: 0;
-        gap: $border;
-        background-color: $alternate;
+        gap: variables.$border;
+        background-color: variables.$alternate;
         flex-flow: row nowrap;
         .stat {
-          background-color: $background;
+          background-color: variables.$background;
           flex: 1 0 200px;
           padding: 50px 20px;
           height: 100%;
@@ -118,7 +117,7 @@
       .caption {
         text-align: center;
         font-size: 17px;
-        color: $grey;
+        color: variables.$grey;
         line-height: 112%;
         font-weight: 400;
         @media (max-width: 1000px), (max-height: 600px) {

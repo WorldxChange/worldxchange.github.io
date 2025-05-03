@@ -1,4 +1,4 @@
-@import "@/styles/variables.scss";
+@use "@/styles/variables";
 .container {
   width: calc(100% - 2 * 50px);
   max-width: var(--part-width);
@@ -29,7 +29,7 @@
     &.section {
       margin-bottom: 16px;
       font-weight: 600;
-      color: $grey;
+      color: variables.$grey;
     }
     &.text {
       max-width: 820px;

@@ -1,5 +1,5 @@
 @use "sass:color";
-@import "@/styles/variables.scss";
+@use "@/styles/variables";
 
 .container {
   position: sticky;
@@ -9,11 +9,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: $header-height;
+    height: variables.$header-height;
     padding: 0px 16px;
-    max-width: $header-width;
+    max-width: variables.$header-width;
     margin: 0 auto;
-    color: $white;
+    color: variables.$white;
     font-size: 12px;
 
     .title {
@@ -32,10 +32,11 @@
         li {
           list-style-type: none;
           opacity: 0.6;
-          border-bottom: $border solid color.adjust($white, $alpha: -1);
+          border-bottom: variables.$border solid
+            color.adjust(variables.$white, $alpha: -1);
           a {
             display: inline-block;
-            line-height: calc($header-height - 1px);
+            line-height: calc(variables.$header-height - 1px);
             text-decoration: none;
             padding: 0 10px;
           }
@@ -44,15 +45,18 @@
             opacity: 1;
             margin-left: 10px;
             a {
-              margin: calc(($header-height - $border - 24px) / 2) 0;
+              margin: calc(
+                  (variables.$header-height - variables.$border - 24px) / 2
+                )
+                0;
               display: inline-flex;
               align-items: center;
               padding: 7px 10px;
               height: 24px;
               opacity: 1;
               line-height: 12px;
-              background-color: $button;
-              color: $button-color !important;
+              background-color: variables.$button;
+              color: variables.$button-color !important;
               border-radius: 15px;
             }
           }
@@ -70,7 +74,7 @@
       left: 50%;
       transform: translateX(-50%);
       border: none;
-      height: $border;
+      height: variables.$border;
       position: absolute;
       background: #aaa;
       opacity: 0.3;

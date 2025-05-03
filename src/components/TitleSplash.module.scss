@@ -1,14 +1,14 @@
-@import "@/styles/variables.scss";
+@use "@/styles/variables";
 
 .container {
   z-index: 10;
-  height: calc(100dvh - $header-height - $header-spacing);
+  height: calc(100dvh - variables.$header-height - variables.$header-spacing);
   width: 100%;
   position: sticky;
-  margin-top: $header-spacing;
+  margin-top: variables.$header-spacing;
   padding: 0 50px;
-  padding-top: -$header-spacing;
-  top: calc(-100dvh + 2 * $header-height + $header-spacing);
+  padding-top: -(variables.$header-spacing);
+  top: calc(-100dvh + 2 * variables.$header-height + variables.$header-spacing);
   // center children
   display: flex;
   flex-flow: column nowrap;
@@ -48,7 +48,7 @@
     line-height: 75px;
     font-weight: 600;
     position: unset;
-    top: calc($header-height/2 - 0.5em);
+    top: calc(variables.$header-height/2 - 0.5em);
     left: 20px;
     z-index: 200;
 

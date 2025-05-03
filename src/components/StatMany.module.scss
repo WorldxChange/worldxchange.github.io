@@ -1,4 +1,4 @@
-@import "@/styles/variables.scss";
+@use "@/styles/variables";
 @import "./StatMedia.module.scss";
 .wrapper {
   .stats {
@@ -9,7 +9,7 @@
     align-items: stretch !important;
     display: flex;
     flex-flow: row wrap !important;
-    gap: $border !important;
+    gap: variables.$border !important;
     .stat {
       max-width: unset !important;
       flex: 1 0 350px !important;
@@ -34,11 +34,11 @@
       }
     }
     padding: 0;
-    gap: $border;
-    background-color: $alternate;
+    gap: variables.$border;
+    background-color: variables.$alternate;
     flex-flow: row nowrap;
     .stat {
-      background-color: $background;
+      background-color: variables.$background;
       flex: 1 0 200px;
       padding: 50px 20px;
       height: 100%;

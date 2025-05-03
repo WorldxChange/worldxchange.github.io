@@ -1,16 +1,16 @@
-@import "@/styles/variables.scss";
+@use "@/styles/variables";
 
 // text styles
 span {
   &.grey {
-    color: $grey;
+    color: variables.$grey;
     // alternate shade for contrast
     // color: #929292bd;
   }
   &.white {
-    color: $white;
+    color: variables.$white;
   }
   &.green {
-    color: $accent;
+    color: variables.$accent;
   }
 }

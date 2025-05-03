@@ -1,5 +1,5 @@
 @use "sass:color";
-@import "@/styles/variables.scss";
+@use "@/styles/variables";
 
 .wrapper {
   margin: 0 auto;
@@ -51,9 +51,9 @@
 
     .separator {
       border: none;
-      height: $border;
+      height: variables.$border;
       margin: 0 auto;
-      background-color: $alternate;
+      background-color: variables.$alternate;
     }
 
     .cards {
@@ -66,7 +66,7 @@
       .cardWrapper {
         flex: 1 1 250px;
         // TODO: ensure reasonable display without forcing equal size;
-        // max-width: calc(200px + 15px * 2 + $border * 2);
+        // max-width: calc(200px + 15px * 2 + variables.$border * 2);
         list-style-type: none;
         user-select: none;
         @media (max-width: 750px) {
@@ -74,8 +74,8 @@
         }
 
         .card {
-          border: solid $border $alternate;
-          background: $background;
+          border: solid variables.$border variables.$alternate;
+          background: variables.$background;
           padding: 15px;
           display: flex;
           flex-direction: column;
@@ -133,7 +133,7 @@
         0% 100%,
         0% 20px
       );
-      background: $alternate;
+      background: variables.$alternate;
       object-fit: cover;
       display: block;
     }
@@ -145,7 +145,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: color.adjust($background, $alpha: -0.2);
+    background-color: color.adjust(variables.$background, $alpha: -0.2);
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     z-index: 10;
@@ -158,7 +158,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    padding: calc($header-height + 20px) 20px 20px 20px;
+    padding: calc(variables.$header-height + 20px) 20px 20px 20px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -180,17 +180,17 @@
       // &::after {
       //   content: "";
       //   position: absolute;
-      //   bottom: $border;
-      //   left: $border;
-      //   width: calc(100% - 2 * $border);
+      //   bottom: variables.$border;
+      //   left: variables.$border;
+      //   width: calc(100% - 2 * variables.$border);
       //   height: 20px;
       //   z-index: 200;
       //   pointer-events: none;
       //   user-select: none;
       //   background: linear-gradient(
       //     to bottom,
-      //     color.adjust($background, $alpha: -1),
-      //     $background
+      //     color.adjust(variables.$background, $alpha: -1),
+      //     variables.$background
       //   );
       // }
 
@@ -200,8 +200,8 @@
         }
         -ms-overflow-style: none;
         scrollbar-width: none;
-        border: solid $border $accent;
-        background-color: $background;
+        border: solid variables.$border variables.$accent;
+        background-color: variables.$background;
         padding: 25px;
         position: relative;
         @media (max-width: 750px) {
@@ -286,11 +286,11 @@
             margin: auto 0;
             font-weight: 500;
             .role {
-              color: $accent;
+              color: variables.$accent;
             }
 
             .bio {
-              color: $foreground;
+              color: variables.$foreground;
             }
 
             @media (max-width: 750px), (max-height: 350px) {
@@ -344,6 +344,6 @@
   padding: 3px 10px;
   font-size: 0.75em;
   white-space: nowrap;
-  border: solid $border $alternate;
+  border: solid variables.$border variables.$alternate;
   user-select: none;
 }

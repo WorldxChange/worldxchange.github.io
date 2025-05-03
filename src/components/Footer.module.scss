@@ -1,43 +1,43 @@
 @use "sass:color";
-@import "@/styles/variables.scss";
+@use "@/styles/variables";
 
 .container {
   position: relative;
-  // margin-top: calc(-1 * $border);
+  // margin-top: calc(-1 * variables.$border);
   font-size: 14px;
-  background-color: $footer;
-  color: $footer-text;
+  background-color: variables.$footer;
+  color: variables.$footer-text;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   padding: 20px 60px;
   .alt {
-    color: color.adjust($footer-text, $alpha: -0.5);
+    color: color.adjust(variables.$footer-text, $alpha: -0.5);
   }
   .links {
     display: inline-flex;
     flex-flow: row nowrap;
     .link {
-      color: $footer-text;
+      color: variables.$footer-text;
       text-decoration: none;
     }
     .linkSeparator {
       display: inline-block;
       height: 1em;
-      width: $border;
-      border-radius: $border;
-      background-color: color.adjust($footer-text, $alpha: -0.3);
+      width: variables.$border;
+      border-radius: variables.$border;
+      background-color: color.adjust(variables.$footer-text, $alpha: -0.3);
       align-self: center;
       margin: 0 10px;
     }
   }
   ::selection {
-    background: color.adjust($highlight, $alpha: -0.8);
-    color: $highlight;
+    background: color.adjust(variables.$highlight, $alpha: -0.8);
+    color: variables.$highlight;
   }
 
   .link {
-    color: $footer-link;
+    color: variables.$footer-link;
     text-underline-offset: 2px;
     &:hover {
       text-decoration: underline;

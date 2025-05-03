@@ -1,6 +1,6 @@
-@import "@/styles/variables.scss";
+@use "@/styles/variables";
 .wrapper {
-  min-height: calc(100dvh - $header-height);
+  min-height: calc(100dvh - variables.$header-height);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,9 +9,9 @@
     display: block;
     user-select: none;
     margin-top: 1em;
-    background-color: $background;
-    border: solid $border $foreground;
-    color: $foreground;
+    background-color: variables.$background;
+    border: solid variables.$border variables.$foreground;
+    color: variables.$foreground;
     padding: 0.3em 0.9em;
     font-size: 26px;
     transform-origin: center center;
