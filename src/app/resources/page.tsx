@@ -51,6 +51,13 @@ export default makePageStream([
             "In a tragedy of the commons, individual competition over a resource can reduce the resource itself, and thus reduce the fitness of the whole group. An extreme example is evolutionary suicide, which is predicted to occur when the selfish interests of free-riders and cheaters overwhelm cooperative behaviors, and the social good on which they depend ceases to exist. Case studies cite many different and seemingly interacting factors for success. Here we propose an equation-based theoretical model to predict changes in this balance, which determine whether the tragedy of the commons is observed in a particular scenario. Using survey data from 20 Balinese subaks, we explore the explanatory power of two theoretical traditions that are currently used to analyze commons management institutions, revealing multiple regimes with correlated responses to environmental threats. To explore case studies from a comparative perspective requires both theory and methods that can account for differences between regimes and explore transitions between them.",
         },
         {
+          path: "/files/MarionEtAl2025",
+          title:
+            "Coral Sketetal Nitrogen Reveals Isotopic Traces of an Agricultureal Revolution",
+          description:
+            "This study introduces a new method of tracing the history of nutrient loading in coastal oceans via d15N analysis of organic nitrogen preserved in the skeleton of the massive Poritescoral. Four coral cores were collected in Bali, Indonesia, from reefs exposed to high levels of fertilizers in agricultural run-oﬀ, from lagoonal corals impacted by sewage, and from a reef located 30 km oﬀshore.",
+        },
+        {
           path: "/files/LansingEtAl2017",
           title: "Adaptive self-organization of Bali's ancient rice terraces",
           description:
