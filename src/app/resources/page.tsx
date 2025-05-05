@@ -44,6 +44,13 @@ export default makePageStream([
             "The potential for changes in water management regimes to reduce greenhouse gases (GHG) in rice paddies has recently become a major topic of research in Asia, with implications for top-down versus bottom-up management strategies. Flooded rice paddies are a major source of anthropogenic GHG emissions and are responsible for approximately 11% of global anthropogenic methane (CH4) emissions. However, rice is also the most important food crop for people in low- and lower-middle-income countries. While CH emissions can be reduced by lessening the time the plants are submerged, this can trigger increased emissions of nitrous oxide (NO), a more potent GHG. Mitigation options for CH4 and N20 are different, and minimizing one gas may increase the emission of the other. Accurate measurement of these gas emissions in rice paddies is difficult, and the results are controversial. We analysed these trade-offs using continuous high-precision measurements in a closed chamber in 2018-2020. Based on the results, we tested a bottom-up adaptive irrigation regime that improves nitrogen uptake by rice plants while reducing combined GHG emissions and nitrogen runoff from paddies to reefs in agricultural drainages. In 2023, we undertook a follow-up study in which farmers obtained higher rice yields with adaptive intermittent irrigation compared to uniformly flooded fields. These results use the polycentric, self-governing capacity of Balinese subaks for continuous adaptation. This article is part of the theme issue 'Climate change adaptation needs a science of culture.",
         },
         {
+          path: "/files/Mongabay2023",
+          title:
+            "Bali rice experiment cuts greenhouse gas emissions and increases yields",
+          description:
+            "MONGABAY: Rice paddies are like mini power stations. Each stalk acts like a chimney and shoots greenhouse gas from the soil into the air. In particular, rice paddies are responsible for 11% of the world’s emissions of methane, one of the most dangerous greenhouse gases. More than 90 percent of the world’s rice is grown on some 200 million rice farms in Asia.",
+        },
+        {
           path: "/files/evosuicide",
           title:
             "Averting Evolutionary Suicide from the Tragedy of the Commons",
@@ -51,9 +58,9 @@ export default makePageStream([
             "In a tragedy of the commons, individual competition over a resource can reduce the resource itself, and thus reduce the fitness of the whole group. An extreme example is evolutionary suicide, which is predicted to occur when the selfish interests of free-riders and cheaters overwhelm cooperative behaviors, and the social good on which they depend ceases to exist. Case studies cite many different and seemingly interacting factors for success. Here we propose an equation-based theoretical model to predict changes in this balance, which determine whether the tragedy of the commons is observed in a particular scenario. Using survey data from 20 Balinese subaks, we explore the explanatory power of two theoretical traditions that are currently used to analyze commons management institutions, revealing multiple regimes with correlated responses to environmental threats. To explore case studies from a comparative perspective requires both theory and methods that can account for differences between regimes and explore transitions between them.",
         },
         {
-          path: "/files/MarionEtAl2025",
+          path: "/files/MarionEtAl2005",
           title:
-            "Coral Sketetal Nitrogen Reveals Isotopic Traces of an Agricultureal Revolution",
+            "Coral sketetal nitrogen reveals isotopic traces of an agricultureal revolution",
           description:
             "This study introduces a new method of tracing the history of nutrient loading in coastal oceans via d15N analysis of organic nitrogen preserved in the skeleton of the massive Poritescoral. Four coral cores were collected in Bali, Indonesia, from reefs exposed to high levels of fertilizers in agricultural run-oﬀ, from lagoonal corals impacted by sewage, and from a reef located 30 km oﬀshore.",
         },
