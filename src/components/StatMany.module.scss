@@ -1,5 +1,5 @@
 @use "@/styles/variables";
-@import "./StatMedia.module.scss";
+@forward "./StatMedia.module.scss";
 .wrapper {
   .stats {
     width: 100%;

@@ -30,7 +30,7 @@ body {
 body {
   color: variables.$foreground !important;
   background: variables.$background !important;
-  font-family: var(--font), Helvetica, sans-serif;
+  font-family: var(--font), Inter, "SF Pro", Helvetica, sans-serif;
   letter-spacing: -0.0075em;
   font-size: 25px;
   -webkit-font-smoothing: antialiased;
