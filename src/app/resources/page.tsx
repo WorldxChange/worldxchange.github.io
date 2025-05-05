@@ -50,6 +50,13 @@ export default makePageStream([
           description:
             "MONGABAY: Rice paddies are like mini power stations. Each stalk acts like a chimney and shoots greenhouse gas from the soil into the air. In particular, rice paddies are responsible for 11% of the world’s emissions of methane, one of the most dangerous greenhouse gases. More than 90 percent of the world’s rice is grown on some 200 million rice farms in Asia.",
         },
+                {
+          path: "/files/LansingMiller2005",
+          title:
+            "Cooperation, Games, and Ecological Feedback: Some Insights from Bali",
+          description:
+            "For centuries Balinese rice farmers have been engaged in cooperative agricultural practices (Christie 1992; Scarborough, Schoenfelder, and Lansing 1999, 2000). This remarkable achievement in sustainable agriculture is surprising given water supply conditions that would normally result in a rapid breakdown of cooperation and the absence of any centralized control mechanisms. An important cultural element of this system includes networks of water temples that help to coordinate farming practices (Geertz 1980, Lansing 1991). Here we develop and test a simple game-theoretic model that links im- portant features of the human and ecological systems and provides an explanation for the emergence of co- operative farming practices in a decentralized system with severe externalities and the coordinating role of the water temple system.",
+        },
         {
           path: "/files/evosuicide",
           title:
@@ -69,13 +76,6 @@ export default makePageStream([
           title: "Adaptive self-organization of Bali's ancient rice terraces",
           description:
             "Spatial patterning often occurs in ecosystems as a result of a self-organizing process caused by feedback between organisms and the physical environment. Here, we show that the spatial patterns observable in centuries-old Balinese rice terraces are also created by feedback between farmers' decisions and the ecology of the paddies, which triggers a transition from local to global-scale control of water shortages and rice pests. We propose an evolutionary game, based on local farmers' decisions that predicts specific power laws in spatial patterning that are also seen in a multispectral image analysis of Balinese rice terraces. The model shows how feedbacks between human decisions and ecosystem processes can evolve toward an optimal state in which total har- vests are maximized and the system approaches Pareto optimal- ity. It helps explain how multiscale cooperation from the commu- nity to the watershed scale could persist for centuries, and why the disruption of this self-organizing system by the Green Revolu- tion caused chaos in irrigation and devastating losses from pests. The model shows that adaptation in a coupled human-natural system can trigger self-organized criticality (SOC). In previous exogenously driven SOC models, adaptation plays no role, and no optimization occurs. In contrast, adaptive SOC is a self-organizing process where local adaptations drive the system toward local and global optima.",
-        },
-        {
-          path: "/files/LansingMiller2005",
-          title:
-            "Cooperation, Games, and Ecological Feedback: Some Insights from Bali",
-          description:
-            "For centuries Balinese rice farmers have been engaged in cooperative agricultural practices (Christie 1992; Scarborough, Schoenfelder, and Lansing 1999, 2000). This remarkable achievement in sustainable agriculture is surprising given water supply conditions that would normally result in a rapid breakdown of cooperation and the absence of any centralized control mechanisms. An important cultural element of this system includes networks of water temples that help to coordinate farming practices (Geertz 1980, Lansing 1991). Here we develop and test a simple game-theoretic model that links im- portant features of the human and ecological systems and provides an explanation for the emergence of co- operative farming practices in a decentralized system with severe externalities and the coordinating role of the water temple system.",
         },
       ],
     },
