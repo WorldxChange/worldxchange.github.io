@@ -21,14 +21,14 @@ export default makePageStream([
           path: "files/video",
           title: "WxC Initial Pilot Experiments Video",
           description:
-            "A short video introducing the WxC project and its goals, focusing on the initial pilot experiment on Bali and its potential for global impact. The video highlights the project's innovative approach to addressing climate change and its implications for sustainable agriculture.",
+            "A video introducing the WxC project and its goals, focusing on the initial pilot experiment on Bali and its potential for global impact. The video highlights the project's innovative approach to addressing climate change and its implications for sustainable agriculture.",
           type: "mp4",
         },
         {
           path: "files/LansingWT",
           title: "Subaks, Water Temples, and Balinese Rice Farming Video",
           description:
-            ".",
+            "An introduction to the Balinese system of subaks and water temples that coordinate rice farming on Bali.",
           type: "mp4",
         },
         {
