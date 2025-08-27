@@ -250,7 +250,7 @@ export default makePageStream([
           img: "/img/team/planet.webp",
           link: "",
           tags: tags.get("Sc", "En"),
-          role: "Pittsburgh, PA USA",
+          role: "San Francisco, CA USA",
           bio: "",
         },
         /* {
