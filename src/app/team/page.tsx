@@ -23,8 +23,8 @@ export default makePageStream([
   {
     component: TeamList,
     data: {
-      header: "Core",
-      text: "Envisioning and implementing the needed **ideas** and *infrastructure*.",
+      header: "Leads",
+      text: "Envisioning and implementing the fundamental **ideas**",
       people: [
         {
           name: "J. Stephen Lansing",
@@ -42,6 +42,15 @@ export default makePageStream([
           role: "Carnegie Mellon University and the Santa Fe Institute",
           bio: "",
         },
+      ],
+    },
+  },
+  {
+    component: TeamList,
+    data: {
+      header: "Core",
+      text: "Contributing core **ideas** and *infrastructure*",
+      people: [
         {
           name: "Marc Müller",
           img: "/img/team/muellema.webp",
@@ -80,8 +89,8 @@ export default makePageStream([
   {
     component: TeamList,
     data: {
-      header: "Bali",
-      text: "From **ideas** to *results.*",
+      header: "Core Bali",
+      text: "Providing **ideas** and *results*",
       people: [
         {
           name: "Wayan Alit Arthawigina",
@@ -130,7 +139,7 @@ export default makePageStream([
     component: TeamList,
     data: {
       header: "Network",
-      text: "Generating *insights,* advice, and other **key contributions.**",
+      text: "Generating *insights,* advice, and other **key contributions**",
       people: [
         {
           name: "Jeff Kersey",
@@ -227,7 +236,7 @@ export default makePageStream([
     component: TeamList,
     data: {
       header: "Organizations",
-      text: "Supporting our efforts in various ways.",
+      text: "Supporting the project in various ways",
       people: [
         {
           name: "Santa Fe Institute",
