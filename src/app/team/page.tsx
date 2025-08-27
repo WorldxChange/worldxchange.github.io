@@ -89,7 +89,7 @@ export default makePageStream([
   {
     component: TeamList,
     data: {
-      header: "Core Bali",
+      header: "Core on Bali",
       text: "Providing **ideas** and *results*",
       people: [
         {
