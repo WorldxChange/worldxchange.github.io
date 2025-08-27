@@ -24,7 +24,7 @@ export default makePageStream([
     component: TeamList,
     data: {
       header: "Leads",
-      text: "Envisioning and implementing the fundamental **ideas**",
+      text: "*Envisioning* and *implementing* the **fundamental ideas**",
       people: [
         {
           name: "J. Stephen Lansing",
@@ -89,8 +89,8 @@ export default makePageStream([
   {
     component: TeamList,
     data: {
-      header: "Core on Bali",
-      text: "Providing **ideas** and *results*",
+      header: "Core (Bali)",
+      text: "Providing *ideas* and **results**",
       people: [
         {
           name: "Wayan Alit Arthawigina",
@@ -139,7 +139,7 @@ export default makePageStream([
     component: TeamList,
     data: {
       header: "Network",
-      text: "Generating *insights,* advice, and other **key contributions**",
+      text: "Generating **insights,** *advice,* and other *key* **contributions**",
       people: [
         {
           name: "Jeff Kersey",
@@ -236,7 +236,7 @@ export default makePageStream([
     component: TeamList,
     data: {
       header: "Organizations",
-      text: "Supporting the project in various ways",
+      text: "*Supporting* the **project** in various ways",
       people: [
         {
           name: "Santa Fe Institute",
