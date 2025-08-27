@@ -144,7 +144,7 @@ export default makePageStream([
           name: "Andrew Zolli",
           img: "/img/team/andrewzolli.webp",
           link: "",
-          tags: tags.get("Sc". "En"),
+          tags: tags.get("Sc", "En"),
           role: "Chief Impact Officer, Planet",
           bio: "",
         },

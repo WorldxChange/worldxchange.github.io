@@ -18,14 +18,14 @@ export default makePageStream([
     data: {
       files: [
         {
-          path: "files/video",
+          path: "media/video",
           title: "WxC Initial Pilot Experiments Video",
           description:
             "A video introducing the WxC project and its goals, focusing on the initial pilot experiment on Bali and its potential for global impact. The video highlights the project's innovative approach to addressing climate change and its implications for sustainable agriculture.",
           type: "mp4",
         },
         {
-          path: "files/LansingWT",
+          path: "media/LansingWT",
           title: "Subaks, Water Temples, and Balinese Rice Farming Video",
           description:
             "An introduction to the Balinese system of subaks and water temples that coordinate rice farming on Bali.",
@@ -57,7 +57,7 @@ export default makePageStream([
           description:
             "MONGABAY: Rice paddies are like mini power stations. Each stalk acts like a chimney and shoots greenhouse gas from the soil into the air. In particular, rice paddies are responsible for 11% of the world’s emissions of methane, one of the most dangerous greenhouse gases. More than 90 percent of the world’s rice is grown on some 200 million rice farms in Asia.",
         },
-                {
+        {
           path: "/files/LansingMiller2005",
           title:
             "Cooperation, Games, and Ecological Feedback: Some Insights from Bali",
