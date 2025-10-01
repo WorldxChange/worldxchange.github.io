@@ -53,7 +53,7 @@ export default makePageStream([
           src: "/img/center/remote-sensing-before.webp",
           alt: "Sensing Before",
           blurbs: [
-            "Remote sensing provides the needed *monitoring, verification, and reporting (MVR)* of successful stewardship.",
+            "Remote sensing provides the needed *monitoring, reporting, and verification (MRV)* of successful stewardship.",
           ],
         },
         {
