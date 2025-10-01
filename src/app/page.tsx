@@ -217,7 +217,7 @@ export default makePageStream([
           stat: {
             number: 19,
           },
-          text: "**subaks** form the *core of the UNESCO site*, all of which are paricipating in the **pilot project.**",
+          text: "**subaks** form the *core of the UNESCO site.*  This site is where we will focus the **next phase of the project**.",
         },
         {
           stat: {
