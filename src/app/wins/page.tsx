@@ -19,7 +19,7 @@ export default makePageStream([
     data: {
       section: "Participate in the Bali Project",
       header: "Carbon Offsets",
-      text: "To **support the farmers who adopt AWD** we are selling carbon offsets.  To ensure **high-quality** offsets, we will **monitor, verify, and report (MVR)** AWD adoption using our remote sensing and automated infrastructure.",
+      text: "To **support the farmers who adopt AWD** we are selling carbon offsets.  To ensure **high-quality** offsets, we will **monitor, report, and verify (MRV)** AWD adoption using our remote sensing and automated infrastructure.",
     },
   },
   {
